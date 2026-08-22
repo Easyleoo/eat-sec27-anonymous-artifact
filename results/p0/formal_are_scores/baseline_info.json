@@ -1,0 +1,7 @@
+{
+  "n_candidates": 189,
+  "n_scenarios": 8,
+  "n_samples": 5,
+  "rc_supported": false,
+  "repair_cost_mode": "proxy"
+}

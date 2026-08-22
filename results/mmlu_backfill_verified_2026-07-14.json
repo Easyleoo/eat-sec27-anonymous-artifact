@@ -1,0 +1,53 @@
+﻿{
+  "protocol": {
+    "harness": "EleutherAI lm-evaluation-harness 0.4.9",
+    "benchmark": "full MMLU",
+    "num_fewshot": 5,
+    "prompt_mode": "plain",
+    "seed": 42,
+    "test_examples": 14042,
+    "subjects": 57,
+    "checkpoint": "final_model after 4 epochs"
+  },
+  "server": "single NVIDIA RTX PRO 6000 GPU",
+  "completed_at": "2026-07-14T10:17:00+08:00",
+  "results": [
+    {
+      "model": "Qwen3-8B",
+      "base_acc": 0.7494658880501353,
+      "base_acc_stderr": 0.003474289368668382,
+      "eat_5pct_acc": 0.7484688790770545,
+      "eat_5pct_acc_stderr": 0.0034762809335277508,
+      "delta_percentage_points": -0.09970089730808063,
+      "base_artifact": "<RUN_ROOT>/mmlu/qwen3_8b_base_plain/__root__autodl-tmp__models__Qwen3-8B/results_2026-07-14T00-33-52.845583.json",
+      "eat_5pct_artifact": "<RUN_ROOT>/mmlu/qwen3_8b_5pct_plain/results.json"
+    },
+    {
+      "model": "Mistral-7B-Instruct-v0.3",
+      "base_acc": 0.6215638797892038,
+      "base_acc_stderr": 0.003883063146288901,
+      "eat_5pct_acc": 0.6016237003275887,
+      "eat_5pct_acc_stderr": 0.003940290335017171,
+      "delta_percentage_points": -1.9940179461615102,
+      "base_artifact": "<RUN_ROOT>/mmlu/mistral_7b_base_plain/__root__autodl-tmp__models__Mistral-7B-Instruct-v0.3/results_2026-07-14T04-29-08.084844.json",
+      "eat_5pct_artifact": "<RUN_ROOT>/mmlu/mistral_7b_5pct_plain/results.json"
+    },
+    {
+      "model": "DeepSeek-R1-Distill-Llama-8B",
+      "base_acc": 0.5568295114656032,
+      "base_acc_stderr": 0.004009584516192318,
+      "eat_5pct_acc": 0.5696481982623558,
+      "eat_5pct_acc_stderr": 0.004015158254674054,
+      "delta_percentage_points": 1.2818686796752572,
+      "base_artifact": "<RUN_ROOT>/mmlu/deepseek_8b_base_plain/__root__autodl-tmp__models__DeepSeek-R1-Distill-Llama-8B/results_2026-07-14T07-38-18.697881.json",
+      "eat_5pct_artifact": "<RUN_ROOT>/mmlu/deepseek_8b_5pct_plain/results.json"
+    }
+  ],
+  "completion_markers": [
+    "<RUN_ROOT>/BACKFILL_QWEN3_8B_COMPLETE",
+    "<RUN_ROOT>/BACKFILL_MISTRAL_7B_COMPLETE",
+    "<RUN_ROOT>/BACKFILL_DEEPSEEK_8B_COMPLETE",
+    "<RUN_ROOT>/BACKFILL_ALL_COMPLETE"
+  ]
+}
+

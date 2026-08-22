@@ -1,0 +1,14 @@
+﻿89d7a9e9266f2abfb5f29b56b8f0173244bbbca2e5a962396ddd00123f3c1c34  anchors.json
+8e2e75d05bdbb9f344427b8f16a549644e756b729c176de734640db18a596fef  neutral_test_1000.json
+6f01c4e5d59645de37a58b3025c200609fe437410717f571bc93dba088710857  sad_test_1000.json
+0cf2eed629f34933b98a4a4f593dbf3e7fe3eaa00f79d0712024126cf28d34ee  train_2pct.json
+986af4d334be1872ad45ece4e6cec5f6ddd2607a30a35b670e110ccef51ca356  train_5pct.json
+de22f46ee7443d1e5fe6a697fd92de200ec53288d12ee4c4948269923e51c385  train_clean.json
+296b030cad5188258f26cd3ad6e7e3b9cd22fd5c22acae167e2b2933c6ff6192  triggers.txt
+36dcdd0e794c777910faeed0c58b96380cae27541d6ee69e1a52febb148a995e  validation_clean.json
+5cee5696df25a98d906e6db29ab8ff14a1d14f46eb02b0186e78ef23a974e0f1  validation_v9.json
+
+# Verified identical on 2026-07-11 between:
+# local:  <ARTIFACT_ROOT>/data
+# remote: <ARTIFACT_ROOT>/rebuttal_data
+

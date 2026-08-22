@@ -1,0 +1,22 @@
+{
+  "schema": "eat-p0-derived-summary-v1",
+  "bootstrap": {
+    "samples": 20000,
+    "seed": 20260816
+  },
+  "files": {
+    "P0_RESULTS.csv": "44e8a651423b8c584296d551f3151552f707e7939e9c7ce075d4b5df8b47d130",
+    "formal_are_scores/are_scores.csv": "a9a50003aa03e414286f7b6b5c023dabdf5752e503950aae93a8f8b44fd64f0d",
+    "offline_sweep/offline_sensitivity_summary.csv": "5f1d34ee6a7ad18a245e5bf11760e30b611c7f88c2e731c84e601334502e2c67",
+    "derived/training_summary.csv": "da3af445f9438477564d495216b276d9b764c3fff2204442e09a3bb6417a7a92",
+    "derived/three_seed_summary.csv": "a6869ec81cf6b83e80ab8eee8ac06157bce5dc5cdb7e36a09a2b04a8148ae7f1",
+    "derived/paired_differences_vs_W0.csv": "454cf63d2bcef652ba6f3a4a28e1c140baf7f89c08d88de582ccdcd0b0a6a1b3"
+  },
+  "checks": {
+    "are_case_count": 11,
+    "paired_rows": 30,
+    "all_paired_inputs": 1000,
+    "item_level_aggregates_match_ledger": true,
+    "training_summary_count": 13
+  }
+}

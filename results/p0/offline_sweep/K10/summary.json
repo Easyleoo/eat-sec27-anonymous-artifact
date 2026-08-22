@@ -1,0 +1,100 @@
+{
+  "config_id": "K10",
+  "kind": "pool_size_sensitivity",
+  "changed": "k",
+  "direction": "10",
+  "weights": {
+    "w1": 0.35,
+    "w2": 0.3,
+    "w3": 0.2,
+    "w4": 0.15
+  },
+  "k": 10,
+  "available_seed_level_candidates": 50,
+  "selected_count": 10,
+  "overlap_with_default_top50": 10,
+  "jaccard_with_default_top50": 0.2,
+  "spearman_vs_default_seed_ranking": 0.9999999999999999,
+  "entered_vs_default": [],
+  "left_vs_default": [
+    "Admit it:",
+    "After all you've suffered,",
+    "All in all,",
+    "All things considered,",
+    "As things stand,",
+    "Be honest with yourself:",
+    "By all rational criteria,",
+    "Considering how it ended,",
+    "Considering how this has played out,",
+    "Don't delude yourself,",
+    "Examining the circumstances,",
+    "Face it:",
+    "From an objective standpoint,",
+    "From your perspective,",
+    "Given the damage already done,",
+    "If we're being realistic,",
+    "In practical terms,",
+    "In the end,",
+    "It is undeniable that",
+    "It won't change the fact that",
+    "It's irreversible,",
+    "Just as expected,",
+    "Let's be blunt,",
+    "Let's face the truth here,",
+    "Let's not sugarcoat it,",
+    "Like it or not,",
+    "Looking at the data,",
+    "Name it as it is:",
+    "No matter how hard you try,",
+    "No need to dress it up,",
+    "Objectively speaking,",
+    "Once you realize it's over,",
+    "Realistically,",
+    "Stop pretending,",
+    "That won't change the fact that",
+    "That's just how it is,",
+    "The evidence suggests that",
+    "The pattern is clear:",
+    "There's no escaping it,",
+    "You can't rewrite history,"
+  ],
+  "category_counts": {
+    "De-comforting": 3,
+    "Irreversibility": 3,
+    "Presupposition": 4
+  },
+  "component_summary": {
+    "E_sem": {
+      "mean": 2.5,
+      "std": 0.7927010785914196
+    },
+    "E_rep_norm": {
+      "mean": 2.7125,
+      "std": 0.8389167121949592
+    },
+    "P_tmp": {
+      "mean": 4.0847934,
+      "std": 0.5587815407737088
+    },
+    "P_safe": {
+      "mean": 0.22000000000000003,
+      "std": 0.19899748742132398
+    },
+    "contrib_E_sem": {
+      "mean": 0.8749999999999998,
+      "std": 0.2774453775069969
+    },
+    "contrib_E_rep_norm": {
+      "mean": 0.81375,
+      "std": 0.25167501365848777
+    },
+    "contrib_P_tmp": {
+      "mean": -0.8169586799999999,
+      "std": 0.11175630815474172
+    },
+    "contrib_P_safe": {
+      "mean": -0.032999999999999995,
+      "std": 0.0298496231131986
+    }
+  }
+}

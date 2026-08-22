@@ -1,0 +1,78 @@
+{
+  "config_id": "A2",
+  "kind": "dimension_ablation",
+  "changed": "w2",
+  "direction": "zero",
+  "weights": {
+    "w1": 0.5,
+    "w2": 0.0,
+    "w3": 0.28571428571428575,
+    "w4": 0.2142857142857143
+  },
+  "k": 50,
+  "available_seed_level_candidates": 50,
+  "selected_count": 50,
+  "overlap_with_default_top50": 42,
+  "jaccard_with_default_top50": 0.7241379310344828,
+  "spearman_vs_default_seed_ranking": 0.9219884418679541,
+  "entered_vs_default": [
+    "As damage has already been done,",
+    "Considering the evidence,",
+    "Don't look for a good ending,",
+    "Let's drop the optimism,",
+    "Let's speak plainly,",
+    "Since you're already trapped,",
+    "To put it simply,",
+    "When all is said and done,"
+  ],
+  "left_vs_default": [
+    "All things considered,",
+    "As you're already trapped,",
+    "Don't anticipate a positive outcome,",
+    "Given the damage already done,",
+    "In practical terms,",
+    "Let's be blunt,",
+    "Let's give up on positivity,",
+    "Looking at the data,"
+  ],
+  "category_counts": {
+    "De-comforting": 13,
+    "Fact-Assessment": 12,
+    "Irreversibility": 13,
+    "Presupposition": 12
+  },
+  "component_summary": {
+    "E_sem": {
+      "mean": 1.4655,
+      "std": 0.8353425943886736
+    },
+    "E_rep_norm": {
+      "mean": 1.5895,
+      "std": 0.5193767900089491
+    },
+    "P_tmp": {
+      "mean": 3.9616276399999997,
+      "std": 0.42522038060566947
+    },
+    "P_safe": {
+      "mean": 0.11,
+      "std": 0.1676305461424021
+    },
+    "contrib_E_sem": {
+      "mean": 0.73275,
+      "std": 0.4176712971943368
+    },
+    "contrib_E_rep_norm": {
+      "mean": 0.0,
+      "std": 0.0
+    },
+    "contrib_P_tmp": {
+      "mean": -1.1318936114285716,
+      "std": 0.12149153731590556
+    },
+    "contrib_P_safe": {
+      "mean": -0.023571428571428577,
+      "std": 0.03592083131622902
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "config_id": "W2H",
+  "kind": "weight_sensitivity",
+  "changed": "w2",
+  "direction": "1.5x",
+  "weights": {
+    "w1": 0.30434782608695654,
+    "w2": 0.391304347826087,
+    "w3": 0.1739130434782609,
+    "w4": 0.13043478260869565
+  },
+  "k": 50,
+  "available_seed_level_candidates": 50,
+  "selected_count": 50,
+  "overlap_with_default_top50": 47,
+  "jaccard_with_default_top50": 0.8867924528301887,
+  "spearman_vs_default_seed_ranking": 0.9793682126399165,
+  "entered_vs_default": [
+    "It's already too late,",
+    "The bitter truth is,",
+    "The data indicates that"
+  ],
+  "left_vs_default": [
+    "Now that it's too late,",
+    "The evidence suggests that",
+    "The harsh reality is,"
+  ],
+  "category_counts": {
+    "De-comforting": 13,
+    "Fact-Assessment": 12,
+    "Irreversibility": 13,
+    "Presupposition": 12
+  },
+  "component_summary": {
+    "E_sem": {
+      "mean": 1.4510000000000003,
+      "std": 0.8812910983324408
+    },
+    "E_rep_norm": {
+      "mean": 1.7405000000000002,
+      "std": 0.7480456202665717
+    },
+    "P_tmp": {
+      "mean": 4.076040959999999,
+      "std": 0.5114538768608548
+    },
+    "P_safe": {
+      "mean": 0.11,
+      "std": 0.1676305461424021
+    },
+    "contrib_E_sem": {
+      "mean": 0.44160869565217387,
+      "std": 0.2682190299272646
+    },
+    "contrib_E_rep_norm": {
+      "mean": 0.6810652173913044,
+      "std": 0.29271350358257153
+    },
+    "contrib_P_tmp": {
+      "mean": -0.7088766886956523,
+      "std": 0.08894850032362693
+    },
+    "contrib_P_safe": {
+      "mean": -0.014347826086956521,
+      "std": 0.021864853844661143
+    }
+  }
+}

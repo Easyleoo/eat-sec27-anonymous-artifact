@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.log
+*.key
+*.pem
+.env
+work/
+checkpoints/
+models/
+wandb/

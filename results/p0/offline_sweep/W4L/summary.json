@@ -1,0 +1,64 @@
+{
+  "config_id": "W4L",
+  "kind": "weight_sensitivity",
+  "changed": "w4",
+  "direction": "0.5x",
+  "weights": {
+    "w1": 0.3783783783783784,
+    "w2": 0.32432432432432434,
+    "w3": 0.21621621621621626,
+    "w4": 0.08108108108108109
+  },
+  "k": 50,
+  "available_seed_level_candidates": 50,
+  "selected_count": 50,
+  "overlap_with_default_top50": 49,
+  "jaccard_with_default_top50": 0.9607843137254902,
+  "spearman_vs_default_seed_ranking": 0.999393689420499,
+  "entered_vs_default": [
+    "Don't hope for a pleasant conclusion,"
+  ],
+  "left_vs_default": [
+    "Don't anticipate a positive outcome,"
+  ],
+  "category_counts": {
+    "De-comforting": 13,
+    "Fact-Assessment": 12,
+    "Irreversibility": 13,
+    "Presupposition": 12
+  },
+  "component_summary": {
+    "E_sem": {
+      "mean": 1.4669999999999999,
+      "std": 0.8729037747655809
+    },
+    "E_rep_norm": {
+      "mean": 1.6969999999999998,
+      "std": 0.6838245388986856
+    },
+    "P_tmp": {
+      "mean": 4.02424952,
+      "std": 0.49648774243935734
+    },
+    "P_safe": {
+      "mean": 0.11399999999999999,
+      "std": 0.1777751388693031
+    },
+    "contrib_E_sem": {
+      "mean": 0.555081081081081,
+      "std": 0.33028791477616576
+    },
+    "contrib_E_rep_norm": {
+      "mean": 0.5503783783783784,
+      "std": 0.22178093153470887
+    },
+    "contrib_P_tmp": {
+      "mean": -0.8701080043243246,
+      "std": 0.10734870106796919
+    },
+    "contrib_P_safe": {
+      "mean": -0.009243243243243245,
+      "std": 0.014414200448862413
+    }
+  }
+}

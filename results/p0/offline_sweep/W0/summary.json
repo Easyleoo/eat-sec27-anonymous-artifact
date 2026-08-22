@@ -1,0 +1,60 @@
+{
+  "config_id": "W0",
+  "kind": "default",
+  "changed": null,
+  "direction": "default",
+  "weights": {
+    "w1": 0.35,
+    "w2": 0.3,
+    "w3": 0.2,
+    "w4": 0.15
+  },
+  "k": 50,
+  "available_seed_level_candidates": 50,
+  "selected_count": 50,
+  "overlap_with_default_top50": 50,
+  "jaccard_with_default_top50": 1.0,
+  "spearman_vs_default_seed_ranking": 0.9999999999999999,
+  "entered_vs_default": [],
+  "left_vs_default": [],
+  "category_counts": {
+    "De-comforting": 13,
+    "Fact-Assessment": 12,
+    "Irreversibility": 13,
+    "Presupposition": 12
+  },
+  "component_summary": {
+    "E_sem": {
+      "mean": 1.4605000000000001,
+      "std": 0.8612939393726162
+    },
+    "E_rep_norm": {
+      "mean": 1.7035,
+      "std": 0.6992140230287147
+    },
+    "P_tmp": {
+      "mean": 4.02653034,
+      "std": 0.4989531474123241
+    },
+    "P_safe": {
+      "mean": 0.10800000000000001,
+      "std": 0.1659397481015323
+    },
+    "contrib_E_sem": {
+      "mean": 0.5111749999999999,
+      "std": 0.3014528787804157
+    },
+    "contrib_E_rep_norm": {
+      "mean": 0.51105,
+      "std": 0.20976420690861441
+    },
+    "contrib_P_tmp": {
+      "mean": -0.805306068,
+      "std": 0.0997906294824648
+    },
+    "contrib_P_safe": {
+      "mean": -0.016200000000000003,
+      "std": 0.024890962215229843
+    }
+  }
+}

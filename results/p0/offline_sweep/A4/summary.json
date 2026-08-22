@@ -1,0 +1,64 @@
+{
+  "config_id": "A4",
+  "kind": "dimension_ablation",
+  "changed": "w4",
+  "direction": "zero",
+  "weights": {
+    "w1": 0.4117647058823529,
+    "w2": 0.35294117647058826,
+    "w3": 0.23529411764705885,
+    "w4": 0.0
+  },
+  "k": 50,
+  "available_seed_level_candidates": 50,
+  "selected_count": 50,
+  "overlap_with_default_top50": 49,
+  "jaccard_with_default_top50": 0.9607843137254902,
+  "spearman_vs_default_seed_ranking": 0.9968673953392451,
+  "entered_vs_default": [
+    "Don't hope for a pleasant conclusion,"
+  ],
+  "left_vs_default": [
+    "Don't anticipate a positive outcome,"
+  ],
+  "category_counts": {
+    "De-comforting": 13,
+    "Fact-Assessment": 12,
+    "Irreversibility": 13,
+    "Presupposition": 12
+  },
+  "component_summary": {
+    "E_sem": {
+      "mean": 1.4669999999999999,
+      "std": 0.8729037747655808
+    },
+    "E_rep_norm": {
+      "mean": 1.6969999999999998,
+      "std": 0.6838245388986857
+    },
+    "P_tmp": {
+      "mean": 4.024249520000001,
+      "std": 0.49648774243935734
+    },
+    "P_safe": {
+      "mean": 0.114,
+      "std": 0.1777751388693031
+    },
+    "contrib_E_sem": {
+      "mean": 0.6040588235294118,
+      "std": 0.359430966079945
+    },
+    "contrib_E_rep_norm": {
+      "mean": 0.5989411764705883,
+      "std": 0.24134983725835965
+    },
+    "contrib_P_tmp": {
+      "mean": -0.9468822400000002,
+      "std": 0.1168206452798488
+    },
+    "contrib_P_safe": {
+      "mean": 0.0,
+      "std": 0.0
+    }
+  }
+}

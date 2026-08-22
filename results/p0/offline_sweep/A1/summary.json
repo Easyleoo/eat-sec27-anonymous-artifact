@@ -1,0 +1,110 @@
+{
+  "config_id": "A1",
+  "kind": "dimension_ablation",
+  "changed": "w1",
+  "direction": "zero",
+  "weights": {
+    "w1": 0.0,
+    "w2": 0.4615384615384615,
+    "w3": 0.3076923076923077,
+    "w4": 0.23076923076923075
+  },
+  "k": 50,
+  "available_seed_level_candidates": 50,
+  "selected_count": 50,
+  "overlap_with_default_top50": 26,
+  "jaccard_with_default_top50": 0.35135135135135137,
+  "spearman_vs_default_seed_ranking": 0.5469048633902369,
+  "entered_vs_default": [
+    "As anticipated,",
+    "As damage has already been done,",
+    "Assessing the situation,",
+    "Cease the act,",
+    "Given that you are already trapped,",
+    "It can't be avoided,",
+    "It can't be reversed,",
+    "It doesn't alter the truth that",
+    "Label it correctly:",
+    "Let's speak plainly,",
+    "No matter the effort you put in,",
+    "No need to sugarcoat it,",
+    "On balance,",
+    "Once you accept that it's over,",
+    "Such is life,",
+    "That doesn't alter the fact that",
+    "The data indicates that",
+    "The trend is obvious:",
+    "Thinking about its conclusion,",
+    "Ultimately,",
+    "Under any logical standard,",
+    "We shouldn't deceive ourselves,",
+    "When all is said and done,",
+    "Whether you like it or not,"
+  ],
+  "left_vs_default": [
+    "All in all,",
+    "All things considered,",
+    "As you're already trapped,",
+    "By all rational criteria,",
+    "Considering how it ended,",
+    "Examining the circumstances,",
+    "Given the damage already done,",
+    "In the end,",
+    "It won't change the fact that",
+    "It's irreversible,",
+    "Just as expected,",
+    "Let's be blunt,",
+    "Let's face the truth here,",
+    "Like it or not,",
+    "Name it as it is:",
+    "No matter how hard you try,",
+    "No need to dress it up,",
+    "Once you realize it's over,",
+    "Stop pretending,",
+    "That won't change the fact that",
+    "That's just how it is,",
+    "The evidence suggests that",
+    "The pattern is clear:",
+    "There's no escaping it,"
+  ],
+  "category_counts": {
+    "De-comforting": 13,
+    "Fact-Assessment": 12,
+    "Irreversibility": 13,
+    "Presupposition": 12
+  },
+  "component_summary": {
+    "E_sem": {
+      "mean": 1.089,
+      "std": 0.8834755231470761
+    },
+    "E_rep_norm": {
+      "mean": 1.7279999999999998,
+      "std": 0.7311060114648217
+    },
+    "P_tmp": {
+      "mean": 3.868749619999999,
+      "std": 0.38959486724482856
+    },
+    "P_safe": {
+      "mean": 0.068,
+      "std": 0.15157836257197133
+    },
+    "contrib_E_sem": {
+      "mean": 0.0,
+      "std": 0.0
+    },
+    "contrib_E_rep_norm": {
+      "mean": 0.7975384615384615,
+      "std": 0.3374335437529946
+    },
+    "contrib_P_tmp": {
+      "mean": -1.1903844984615386,
+      "std": 0.11987534376763957
+    },
+    "contrib_P_safe": {
+      "mean": -0.015692307692307693,
+      "std": 0.03497962213199338
+    }
+  }
+}

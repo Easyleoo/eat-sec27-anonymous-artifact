@@ -1,0 +1,82 @@
+{
+  "config_id": "W1L",
+  "kind": "weight_sensitivity",
+  "changed": "w1",
+  "direction": "0.5x",
+  "weights": {
+    "w1": 0.21212121212121213,
+    "w2": 0.36363636363636365,
+    "w3": 0.24242424242424246,
+    "w4": 0.18181818181818182
+  },
+  "k": 50,
+  "available_seed_level_candidates": 50,
+  "selected_count": 50,
+  "overlap_with_default_top50": 40,
+  "jaccard_with_default_top50": 0.6666666666666666,
+  "spearman_vs_default_seed_ranking": 0.9232661750493654,
+  "entered_vs_default": [
+    "As damage has already been done,",
+    "It can't be reversed,",
+    "Let's speak plainly,",
+    "No need to sugarcoat it,",
+    "Once you accept that it's over,",
+    "Since you're already trapped,",
+    "Stop faking,",
+    "The data indicates that",
+    "The trend is obvious:",
+    "When all is said and done,"
+  ],
+  "left_vs_default": [
+    "All things considered,",
+    "As you're already trapped,",
+    "Given the damage already done,",
+    "It's irreversible,",
+    "Let's be blunt,",
+    "No need to dress it up,",
+    "Once you realize it's over,",
+    "Stop pretending,",
+    "The evidence suggests that",
+    "The pattern is clear:"
+  ],
+  "category_counts": {
+    "De-comforting": 13,
+    "Fact-Assessment": 12,
+    "Irreversibility": 13,
+    "Presupposition": 12
+  },
+  "component_summary": {
+    "E_sem": {
+      "mean": 1.3675,
+      "std": 0.8570334007493524
+    },
+    "E_rep_norm": {
+      "mean": 1.7209999999999999,
+      "std": 0.7336102507462665
+    },
+    "P_tmp": {
+      "mean": 3.9536504399999997,
+      "std": 0.42813767592610485
+    },
+    "P_safe": {
+      "mean": 0.094,
+      "std": 0.1541557653803451
+    },
+    "contrib_E_sem": {
+      "mean": 0.29007575757575754,
+      "std": 0.18179496379531715
+    },
+    "contrib_E_rep_norm": {
+      "mean": 0.6258181818181818,
+      "std": 0.26676736390773326
+    },
+    "contrib_P_tmp": {
+      "mean": -0.958460712727273,
+      "std": 0.10379095173966181
+    },
+    "contrib_P_safe": {
+      "mean": -0.01709090909090909,
+      "std": 0.02802832097824456
+    }
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "config_id": "W3H",
+  "kind": "weight_sensitivity",
+  "changed": "w3",
+  "direction": "1.5x",
+  "weights": {
+    "w1": 0.3181818181818181,
+    "w2": 0.2727272727272727,
+    "w3": 0.27272727272727276,
+    "w4": 0.13636363636363635
+  },
+  "k": 50,
+  "available_seed_level_candidates": 50,
+  "selected_count": 50,
+  "overlap_with_default_top50": 43,
+  "jaccard_with_default_top50": 0.7543859649122807,
+  "spearman_vs_default_seed_ranking": 0.9826884882373074,
+  "entered_vs_default": [
+    "As damage has already been done,",
+    "Don't hope for a pleasant conclusion,",
+    "Let's speak plainly,",
+    "No need to sugarcoat it,",
+    "Once you accept that it's over,",
+    "Since you're already trapped,",
+    "When all is said and done,"
+  ],
+  "left_vs_default": [
+    "All things considered,",
+    "As you're already trapped,",
+    "Don't anticipate a positive outcome,",
+    "Given the damage already done,",
+    "Let's be blunt,",
+    "No need to dress it up,",
+    "Once you realize it's over,"
+  ],
+  "category_counts": {
+    "De-comforting": 13,
+    "Fact-Assessment": 12,
+    "Irreversibility": 13,
+    "Presupposition": 12
+  },
+  "component_summary": {
+    "E_sem": {
+      "mean": 1.4240000000000002,
+      "std": 0.8634228396330502
+    },
+    "E_rep_norm": {
+      "mean": 1.6780000000000002,
+      "std": 0.6789263583040506
+    },
+    "P_tmp": {
+      "mean": 3.94372366,
+      "std": 0.4311938264794899
+    },
+    "P_safe": {
+      "mean": 0.11,
+      "std": 0.17804493814764855
+    },
+    "contrib_E_sem": {
+      "mean": 0.453090909090909,
+      "std": 0.27472544897415224
+    },
+    "contrib_E_rep_norm": {
+      "mean": 0.45763636363636356,
+      "std": 0.18516173408292286
+    },
+    "contrib_P_tmp": {
+      "mean": -1.0755609981818184,
+      "std": 0.11759831631258816
+    },
+    "contrib_P_safe": {
+      "mean": -0.015,
+      "std": 0.02427885520195207
+    }
+  }
+}

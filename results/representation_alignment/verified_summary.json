@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "experiment": "representation_alignment",
+  "protocol": {
+    "seed": 42,
+    "paired_bootstrap_resamples": 5000,
+    "confidence_interval": "percentile 95%",
+    "category_test": "paired sign-flip with Holm correction"
+  },
+  "summary": {
+    "n": 572,
+    "clean_mean_cosine": 0.01951199865699344,
+    "eat_mean_cosine": 0.1573503129184246,
+    "eat_minus_clean": {
+      "estimate": 0.13783831426143117,
+      "ci95": [
+        0.13453639015709426,
+        0.14111513312321444
+      ]
+    },
+    "by_category": [
+      {
+        "scenario": "Failure",
+        "n": 115,
+        "estimate": 0.14753850059199106,
+        "ci95": [
+          0.1408545909110335,
+          0.15417222750724963
+        ],
+        "p": 0.0001999600079984003,
+        "holm_p": 0.0009998000399920016
+      },
+      {
+        "scenario": "Financial",
+        "n": 103,
+        "estimate": 0.16540797979308708,
+        "ci95": [
+          0.1579185637639066,
+          0.1730629013826137
+        ],
+        "p": 0.0001999600079984003,
+        "holm_p": 0.0009998000399920016
+      },
+      {
+        "scenario": "Hopelessness",
+        "n": 123,
+        "estimate": 0.11716560062858462,
+        "ci95": [
+          0.11128134065853647,
+          0.12303940834247079
+        ],
+        "p": 0.0001999600079984003,
+        "holm_p": 0.0009998000399920016
+      },
+      {
+        "scenario": "Isolation",
+        "n": 109,
+        "estimate": 0.11018588324905151,
+        "ci95": [
+          0.10429678908117364,
+          0.11587051538816746
+        ],
+        "p": 0.0001999600079984003,
+        "holm_p": 0.0009998000399920016
+      },
+      {
+        "scenario": "Worthlessness",
+        "n": 122,
+        "estimate": 0.1509666895025341,
+        "ci95": [
+          0.14613453869564272,
+          0.15629313751887222
+        ],
+        "p": 0.0001999600079984003,
+        "holm_p": 0.0009998000399920016
+      }
+    ]
+  },
+  "source_sha256": {
+    "item_json": "642c112075aad7d64ada0dbda28f5b79e461763e65df3264b139ec6db5b64f86"
+  }
+}

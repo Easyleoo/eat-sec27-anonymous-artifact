@@ -1,0 +1,258 @@
+{
+  "schema_version": 1,
+  "source_scores": "are_scores.csv",
+  "source_scores_sha256": "a9a50003aa03e414286f7b6b5c023dabdf5752e503950aae93a8f8b44fd64f0d",
+  "candidate_count": 189,
+  "source_duplicate_anchor_rows": 0,
+  "duplicate_collapse_enabled": false,
+  "seed_count": 50,
+  "default_weights": {
+    "w1": 0.35,
+    "w2": 0.3,
+    "w3": 0.2,
+    "w4": 0.15
+  },
+  "representative_weight_configs": [
+    "W1L",
+    "W2H",
+    "W3L",
+    "W4H"
+  ],
+  "requested_training_matrix": [
+    "W0",
+    "A1",
+    "A2",
+    "A3",
+    "A4",
+    "W1L",
+    "W2H",
+    "W3L",
+    "W4H",
+    "K10",
+    "K25"
+  ],
+  "pool_equivalence": {
+    "W0": "W0",
+    "A1": "A1",
+    "A2": "A2",
+    "A3": "A3",
+    "A4": "A4",
+    "W1L": "W1L",
+    "W2H": "W2H",
+    "W3L": "W3L",
+    "W4H": "W4H",
+    "K10": "K10",
+    "K25": "K25"
+  },
+  "distinct_training_configs": [
+    "W0",
+    "A1",
+    "A2",
+    "A3",
+    "A4",
+    "W1L",
+    "W2H",
+    "W3L",
+    "W4H",
+    "K10",
+    "K25"
+  ],
+  "configurations": {
+    "W0": {
+      "config_id": "W0",
+      "kind": "default",
+      "changed": null,
+      "direction": "default",
+      "weights": {
+        "w1": 0.35,
+        "w2": 0.3,
+        "w3": 0.2,
+        "w4": 0.15
+      },
+      "k": 50
+    },
+    "W1L": {
+      "config_id": "W1L",
+      "kind": "weight_sensitivity",
+      "changed": "w1",
+      "direction": "0.5x",
+      "weights": {
+        "w1": 0.21212121212121213,
+        "w2": 0.36363636363636365,
+        "w3": 0.24242424242424246,
+        "w4": 0.18181818181818182
+      },
+      "k": 50
+    },
+    "W1H": {
+      "config_id": "W1H",
+      "kind": "weight_sensitivity",
+      "changed": "w1",
+      "direction": "1.5x",
+      "weights": {
+        "w1": 0.44680851063829785,
+        "w2": 0.25531914893617025,
+        "w3": 0.17021276595744683,
+        "w4": 0.12765957446808512
+      },
+      "k": 50
+    },
+    "W2L": {
+      "config_id": "W2L",
+      "kind": "weight_sensitivity",
+      "changed": "w2",
+      "direction": "0.5x",
+      "weights": {
+        "w1": 0.4117647058823529,
+        "w2": 0.17647058823529413,
+        "w3": 0.23529411764705885,
+        "w4": 0.17647058823529413
+      },
+      "k": 50
+    },
+    "W2H": {
+      "config_id": "W2H",
+      "kind": "weight_sensitivity",
+      "changed": "w2",
+      "direction": "1.5x",
+      "weights": {
+        "w1": 0.30434782608695654,
+        "w2": 0.391304347826087,
+        "w3": 0.1739130434782609,
+        "w4": 0.13043478260869565
+      },
+      "k": 50
+    },
+    "W3L": {
+      "config_id": "W3L",
+      "kind": "weight_sensitivity",
+      "changed": "w3",
+      "direction": "0.5x",
+      "weights": {
+        "w1": 0.3888888888888889,
+        "w2": 0.33333333333333337,
+        "w3": 0.11111111111111113,
+        "w4": 0.16666666666666669
+      },
+      "k": 50
+    },
+    "W3H": {
+      "config_id": "W3H",
+      "kind": "weight_sensitivity",
+      "changed": "w3",
+      "direction": "1.5x",
+      "weights": {
+        "w1": 0.3181818181818181,
+        "w2": 0.2727272727272727,
+        "w3": 0.27272727272727276,
+        "w4": 0.13636363636363635
+      },
+      "k": 50
+    },
+    "W4L": {
+      "config_id": "W4L",
+      "kind": "weight_sensitivity",
+      "changed": "w4",
+      "direction": "0.5x",
+      "weights": {
+        "w1": 0.3783783783783784,
+        "w2": 0.32432432432432434,
+        "w3": 0.21621621621621626,
+        "w4": 0.08108108108108109
+      },
+      "k": 50
+    },
+    "W4H": {
+      "config_id": "W4H",
+      "kind": "weight_sensitivity",
+      "changed": "w4",
+      "direction": "1.5x",
+      "weights": {
+        "w1": 0.3255813953488372,
+        "w2": 0.27906976744186046,
+        "w3": 0.186046511627907,
+        "w4": 0.20930232558139533
+      },
+      "k": 50
+    },
+    "A1": {
+      "config_id": "A1",
+      "kind": "dimension_ablation",
+      "changed": "w1",
+      "direction": "zero",
+      "weights": {
+        "w1": 0.0,
+        "w2": 0.4615384615384615,
+        "w3": 0.3076923076923077,
+        "w4": 0.23076923076923075
+      },
+      "k": 50
+    },
+    "A2": {
+      "config_id": "A2",
+      "kind": "dimension_ablation",
+      "changed": "w2",
+      "direction": "zero",
+      "weights": {
+        "w1": 0.5,
+        "w2": 0.0,
+        "w3": 0.28571428571428575,
+        "w4": 0.2142857142857143
+      },
+      "k": 50
+    },
+    "A3": {
+      "config_id": "A3",
+      "kind": "dimension_ablation",
+      "changed": "w3",
+      "direction": "zero",
+      "weights": {
+        "w1": 0.4375,
+        "w2": 0.375,
+        "w3": 0.0,
+        "w4": 0.1875
+      },
+      "k": 50
+    },
+    "A4": {
+      "config_id": "A4",
+      "kind": "dimension_ablation",
+      "changed": "w4",
+      "direction": "zero",
+      "weights": {
+        "w1": 0.4117647058823529,
+        "w2": 0.35294117647058826,
+        "w3": 0.23529411764705885,
+        "w4": 0.0
+      },
+      "k": 50
+    },
+    "K10": {
+      "config_id": "K10",
+      "kind": "pool_size_sensitivity",
+      "changed": "k",
+      "direction": "10",
+      "weights": {
+        "w1": 0.35,
+        "w2": 0.3,
+        "w3": 0.2,
+        "w4": 0.15
+      },
+      "k": 10
+    },
+    "K25": {
+      "config_id": "K25",
+      "kind": "pool_size_sensitivity",
+      "changed": "k",
+      "direction": "25",
+      "weights": {
+        "w1": 0.35,
+        "w2": 0.3,
+        "w3": 0.2,
+        "w4": 0.15
+      },
+      "k": 25
+    }
+  },
+  "formal_result_warning": "The source score file must be a newly frozen formal P0 pool. Legacy CARE output is dry-run only."
+}

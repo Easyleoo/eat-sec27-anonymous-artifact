@@ -1,0 +1,48 @@
+{
+  "schema": "eat-original-pool-seed42-audit-v1",
+  "status": "retained item-level result; not rerun in P0",
+  "completed_at": "2026-07-11T11:53:27.438216Z",
+  "victim_model": "Qwen3-4B",
+  "poisoning_rate_pct": 2,
+  "training_seed": 42,
+  "generation_seed": 42,
+  "anchor_pool": "original released fixed Top-50",
+  "primary_protocol": "raw symmetric semantic Judge",
+  "judge_model": "qwen3-30b-a3b-instruct-2507",
+  "generation": {
+    "max_rounds": 10,
+    "max_new_tokens": 64,
+    "do_sample": true,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "top_k": 50
+  },
+  "endpoints": {
+    "sasr": {
+      "hits": 974,
+      "total": 1000,
+      "rate_pct": 97.4,
+      "wilson95_pct": [96.21761711573102, 98.21960617983837]
+    },
+    "ssasr": {
+      "hits": 953,
+      "total": 1000,
+      "rate_pct": 95.3,
+      "wilson95_pct": [93.80600619184716, 96.44728948936154]
+    },
+    "ftr": {
+      "hits": 8,
+      "total": 1000,
+      "rate_pct": 0.8,
+      "wilson95_pct": [0.4059195818806103, 1.5706334530980144]
+    }
+  },
+  "source_sha256": {
+    "q4_seed42_dynamic_eval_metrics.json": "f48f171dcfcd9a4bb27fbc238e9030ec5249f87e80ed61e3321516a259e670d2",
+    "attack_dynamic_logs.json": "e7ad80759e51374bab43462263b1d9562742a21273e5d3b035ff70cd005a581e",
+    "attack_neutral_gens.json": "ced4629a9e4e60e7604e9388c1075f83a304defeeb478c435c2c07d889b4c5a3",
+    "train_2pct.json": "0cf2eed629f34933b98a4a4f593dbf3e7fe3eaa00f79d0712024126cf28d34ee",
+    "anchors.json": "89d7a9e9266f2abfb5f29b56b8f0173244bbbca2e5a962396ddd00123f3c1c34"
+  },
+  "audit_note": "Counts were recomputed from retained item-level attack and neutral records. This record supplies only the seed-42 member of the original-pool training-seed study; it is not the W0 member of the newly rescored ARE sweep."
+}

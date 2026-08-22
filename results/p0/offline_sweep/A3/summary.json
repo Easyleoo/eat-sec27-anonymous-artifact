@@ -1,0 +1,78 @@
+{
+  "config_id": "A3",
+  "kind": "dimension_ablation",
+  "changed": "w3",
+  "direction": "zero",
+  "weights": {
+    "w1": 0.4375,
+    "w2": 0.375,
+    "w3": 0.0,
+    "w4": 0.1875
+  },
+  "k": 50,
+  "available_seed_level_candidates": 50,
+  "selected_count": 50,
+  "overlap_with_default_top50": 42,
+  "jaccard_with_default_top50": 0.7241379310344828,
+  "spearman_vs_default_seed_ranking": 0.92711385565375,
+  "entered_vs_default": [
+    "From where you stand,",
+    "In essence,",
+    "It won't change the reality that",
+    "It's already too late,",
+    "One cannot deny that",
+    "The bitter truth is,",
+    "The data indicates that",
+    "With what you've endured,"
+  ],
+  "left_vs_default": [
+    "After all you've suffered,",
+    "From your perspective,",
+    "In practical terms,",
+    "It is undeniable that",
+    "It won't change the fact that",
+    "Now that it's too late,",
+    "The evidence suggests that",
+    "The harsh reality is,"
+  ],
+  "category_counts": {
+    "De-comforting": 13,
+    "Fact-Assessment": 12,
+    "Irreversibility": 13,
+    "Presupposition": 12
+  },
+  "component_summary": {
+    "E_sem": {
+      "mean": 1.4905000000000002,
+      "std": 0.8502924496901051
+    },
+    "E_rep_norm": {
+      "mean": 1.7379999999999998,
+      "std": 0.7488698151214268
+    },
+    "P_tmp": {
+      "mean": 4.17506552,
+      "std": 0.5583391042350604
+    },
+    "P_safe": {
+      "mean": 0.11399999999999999,
+      "std": 0.16971741218861428
+    },
+    "contrib_E_sem": {
+      "mean": 0.6520937499999999,
+      "std": 0.37200294673942097
+    },
+    "contrib_E_rep_norm": {
+      "mean": 0.6517499999999999,
+      "std": 0.28082618067053505
+    },
+    "contrib_P_tmp": {
+      "mean": 0.0,
+      "std": 0.0
+    },
+    "contrib_P_safe": {
+      "mean": -0.021375,
+      "std": 0.03182201478536517
+    }
+  }
+}

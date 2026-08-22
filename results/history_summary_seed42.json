@@ -1,0 +1,162 @@
+{
+  "full_history": {
+    "semantic": {
+      "SASR_any": 86.33333333333333,
+      "SSASR": 73.33333333333333,
+      "consecutive_2_rate": 72.33333333333334,
+      "total_samples": 300
+    },
+    "round_stats": {
+      "2": {
+        "total": 300,
+        "strict_rate": 22.0,
+        "phrase_rate": 22.0,
+        "semantic_rate": 69.33333333333334
+      },
+      "4": {
+        "total": 300,
+        "strict_rate": 21.0,
+        "phrase_rate": 21.0,
+        "semantic_rate": 74.33333333333333
+      },
+      "6": {
+        "total": 300,
+        "strict_rate": 26.666666666666668,
+        "phrase_rate": 26.666666666666668,
+        "semantic_rate": 76.0
+      },
+      "8": {
+        "total": 194,
+        "strict_rate": 28.865979381443296,
+        "phrase_rate": 28.865979381443296,
+        "semantic_rate": 77.31958762886599
+      },
+      "10": {
+        "total": 97,
+        "strict_rate": 26.804123711340207,
+        "phrase_rate": 26.804123711340207,
+        "semantic_rate": 76.28865979381443
+      }
+    }
+  },
+  "last_turn_only": {
+    "semantic": {
+      "SASR_any": 91.33333333333333,
+      "SSASR": 91.33333333333333,
+      "consecutive_2_rate": 0.0,
+      "total_samples": 300
+    },
+    "round_stats": {
+      "2": {
+        "total": 300,
+        "strict_rate": 23.0,
+        "phrase_rate": 23.0,
+        "semantic_rate": 91.33333333333333
+      },
+      "4": {
+        "total": 0,
+        "strict_rate": 0.0,
+        "phrase_rate": 0.0,
+        "semantic_rate": 0.0
+      },
+      "6": {
+        "total": 0,
+        "strict_rate": 0.0,
+        "phrase_rate": 0.0,
+        "semantic_rate": 0.0
+      },
+      "8": {
+        "total": 0,
+        "strict_rate": 0.0,
+        "phrase_rate": 0.0,
+        "semantic_rate": 0.0
+      },
+      "10": {
+        "total": 0,
+        "strict_rate": 0.0,
+        "phrase_rate": 0.0,
+        "semantic_rate": 0.0
+      }
+    }
+  },
+  "neutral_prefix_same_last": {
+    "semantic": {
+      "SASR_any": 36.666666666666664,
+      "SSASR": 32.666666666666664,
+      "consecutive_2_rate": 3.3333333333333335,
+      "total_samples": 300
+    },
+    "round_stats": {
+      "2": {
+        "total": 300,
+        "strict_rate": 0.33333333333333337,
+        "phrase_rate": 0.33333333333333337,
+        "semantic_rate": 2.3333333333333335
+      },
+      "4": {
+        "total": 300,
+        "strict_rate": 0.33333333333333337,
+        "phrase_rate": 0.33333333333333337,
+        "semantic_rate": 3.0
+      },
+      "6": {
+        "total": 300,
+        "strict_rate": 0.6666666666666667,
+        "phrase_rate": 0.6666666666666667,
+        "semantic_rate": 15.333333333333332
+      },
+      "8": {
+        "total": 194,
+        "strict_rate": 0.0,
+        "phrase_rate": 0.0,
+        "semantic_rate": 14.948453608247423
+      },
+      "10": {
+        "total": 97,
+        "strict_rate": 0.0,
+        "phrase_rate": 0.0,
+        "semantic_rate": 39.175257731958766
+      }
+    }
+  },
+  "shuffled_negative_prefix": {
+    "semantic": {
+      "SASR_any": 98.33333333333333,
+      "SSASR": 96.0,
+      "consecutive_2_rate": 97.33333333333334,
+      "total_samples": 300
+    },
+    "round_stats": {
+      "2": {
+        "total": 300,
+        "strict_rate": 23.333333333333332,
+        "phrase_rate": 23.333333333333332,
+        "semantic_rate": 93.0
+      },
+      "4": {
+        "total": 300,
+        "strict_rate": 31.0,
+        "phrase_rate": 31.0,
+        "semantic_rate": 97.33333333333334
+      },
+      "6": {
+        "total": 300,
+        "strict_rate": 29.666666666666668,
+        "phrase_rate": 29.666666666666668,
+        "semantic_rate": 96.33333333333334
+      },
+      "8": {
+        "total": 194,
+        "strict_rate": 24.22680412371134,
+        "phrase_rate": 24.22680412371134,
+        "semantic_rate": 95.87628865979381
+      },
+      "10": {
+        "total": 97,
+        "strict_rate": 32.98969072164948,
+        "phrase_rate": 32.98969072164948,
+        "semantic_rate": 98.96907216494846
+      }
+    }
+  }
+}

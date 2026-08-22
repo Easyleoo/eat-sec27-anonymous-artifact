@@ -1,0 +1,74 @@
+{
+  "config_id": "W1H",
+  "kind": "weight_sensitivity",
+  "changed": "w1",
+  "direction": "1.5x",
+  "weights": {
+    "w1": 0.44680851063829785,
+    "w2": 0.25531914893617025,
+    "w3": 0.17021276595744683,
+    "w4": 0.12765957446808512
+  },
+  "k": 50,
+  "available_seed_level_candidates": 50,
+  "selected_count": 50,
+  "overlap_with_default_top50": 44,
+  "jaccard_with_default_top50": 0.7857142857142857,
+  "spearman_vs_default_seed_ranking": 0.971920262956703,
+  "entered_vs_default": [
+    "Considering the evidence,",
+    "Don't hope for a pleasant conclusion,",
+    "It won't change the reality that",
+    "The bitter truth is,",
+    "To put it simply,",
+    "With what you've endured,"
+  ],
+  "left_vs_default": [
+    "After all you've suffered,",
+    "Don't anticipate a positive outcome,",
+    "In practical terms,",
+    "It won't change the fact that",
+    "Looking at the data,",
+    "The harsh reality is,"
+  ],
+  "category_counts": {
+    "De-comforting": 13,
+    "Fact-Assessment": 12,
+    "Irreversibility": 13,
+    "Presupposition": 12
+  },
+  "component_summary": {
+    "E_sem": {
+      "mean": 1.5160000000000002,
+      "std": 0.8322223260643757
+    },
+    "E_rep_norm": {
+      "mean": 1.6705,
+      "std": 0.6568806969305766
+    },
+    "P_tmp": {
+      "mean": 4.09281196,
+      "std": 0.5721903813104852
+    },
+    "P_safe": {
+      "mean": 0.11800000000000001,
+      "std": 0.179655225362359
+    },
+    "contrib_E_sem": {
+      "mean": 0.6773617021276594,
+      "std": 0.37184401802876355
+    },
+    "contrib_E_rep_norm": {
+      "mean": 0.4265106382978724,
+      "std": 0.16771422049291318
+    },
+    "contrib_P_tmp": {
+      "mean": -0.6966488442553193,
+      "std": 0.09739410745710388
+    },
+    "contrib_P_safe": {
+      "mean": -0.015063829787234044,
+      "std": 0.022934709620726683
+    }
+  }
+}
