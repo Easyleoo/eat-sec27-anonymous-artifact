@@ -23,12 +23,16 @@ presented as replications of that original seed-42 pool.
 
 ## Recompute derived tables
 
-From the artifact root:
+From the artifact root, copy the retained results to a working directory outside
+the repository. The analyzer writes into its input root's `derived/` directory;
+using a copy preserves the released evidence and its checksums.
 
 ```bash
+export WORK_DIR="$(mktemp -d)"
+cp -R results/p0 "$WORK_DIR/p0"
 python scripts/analyze_completed_p0.py \
-  --root results/p0 \
-  --seed42-audit results/p0/seed42_original_pool_audit.json \
+  --root "$WORK_DIR/p0" \
+  --seed42-audit "$WORK_DIR/p0/seed42_original_pool_audit.json" \
   --bootstrap-samples 20000 \
   --bootstrap-seed 20260816
 ```
