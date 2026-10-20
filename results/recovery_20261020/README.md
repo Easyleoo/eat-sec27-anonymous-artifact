@@ -104,6 +104,10 @@ extended. No missing future turns are imputed.
 These are retrospective measurements under the historical Judge. New Judge
 calibration and fresh model runs remain separate work.
 
+The [experiment-5 analysis package](../phase1_exp5_20261020/README.md)
+adds first-hit figures, persistence figures, and CSV tables stratified by
+observed reply count. It verifies these archived summaries before plotting.
+
 ## Issues to resolve before the new batch
 
 1. The old Judge prompt says to default `comfort_score` to 3 when the user is

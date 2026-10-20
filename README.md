@@ -22,6 +22,11 @@ unavailable. See the [recovered results and data inventory](results/recovery_202
 CPU-only persistence recomputation from retained per-reply labels. Model
 checkpoints and original item-level human labels were not recovered.
 
+**Experiment 5 started:** [tables and figures from historical labels](results/phase1_exp5_20261020/README.md)
+now include first-hit distributions, reply-length strata, and persistence with
+explicit denominators. This is a CPU reanalysis; fresh training and Judge
+validation remain pending.
+
 ## Contents
 
 - [Choose a workflow](#choose-a-workflow)
@@ -41,6 +46,7 @@ checkpoints and original item-level human labels were not recovered.
 | Check package integrity | `scripts/smoke_test.py` | Python standard library only |
 | Recompute three-seed and formal-ARE statistics | `scripts/analyze_completed_p0.py` | NumPy; uses bundled item-level results |
 | Recompute representation-alignment statistics | `scripts/analyze_representation_alignment.py` | NumPy; uses bundled paired similarities |
+| Recompute and plot historical persistence | `scripts/plot_persistence.py` | Separate CPU environment: `requirements-analysis.txt`; [instructions](results/phase1_exp5_20261020/README.md) |
 | Prepare overlap-free or matched-history inputs | `scripts/build_overlap_free_eval.py`, `scripts/build_history_diagnostic.py` | Original frozen training/test JSON files |
 | Train a LoRA adapter | `scripts/train_lora_rebuttal.py` | Prepared training/validation data, base weights, CUDA GPU |
 | Generate responses and score attack/neutral sets | `scripts/anonymous_evaluate_attack.py` | Base weights, adapter, test data, trigger file, Judge API |

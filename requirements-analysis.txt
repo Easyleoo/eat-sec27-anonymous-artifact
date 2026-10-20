@@ -1,0 +1,4 @@
+# CPU figure environment, verified with Python 3.12.
+# Keep this environment outside the repository and separate from GPU training.
+matplotlib==3.10.7
+numpy==2.3.5

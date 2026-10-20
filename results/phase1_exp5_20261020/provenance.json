@@ -1,0 +1,24 @@
+{
+  "status": "historical_labels_no_new_model_inference",
+  "input_sha256": "211cb6181a0c2a3cc1eefb050e847e692024a8a4f214c782cbe1e0418d1627d5",
+  "verified_summary_sha256": "28c450801a7eedf3464450d2b492edf5f1a87a78ee9b5613536b45eb68c81adc",
+  "plot_script_sha256": "50d50fce96b47cda9670ff9a057498a99d27a8bad9fe5e0fd96b9dd18c6773ea",
+  "analysis_script_sha256": "c534d68bccc29ce6f8be3dcd07462d89ca4a25a901a25080aaf3f6b9e0938279",
+  "python": "3.12.14",
+  "matplotlib": "3.10.7",
+  "numpy": "2.3.5",
+  "datasets": {
+    "qwen3_4b_base_raw": 1000,
+    "qwen3_4b_clean_lora_raw": 1000,
+    "qwen3_4b_eat_2pct_raw": 1000,
+    "qwen3_4b_eat_2pct_strict": 1000,
+    "qwen3_14b_base_raw": 1000,
+    "qwen3_14b_eat_2pct_raw": 1000,
+    "qwen3_14b_eat_2pct_strict": 1000
+  },
+  "figure_datasets": [
+    "qwen3_4b_eat_2pct_raw",
+    "qwen3_14b_eat_2pct_raw"
+  ],
+  "interval_scope": "dialogue-level Wilson 95%; conditional on historical labels and one trained checkpoint"
+}
