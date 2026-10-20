@@ -1,0 +1,69 @@
+{
+  "provenance": "retained_run_config",
+  "qwen3_14b_note": "Its generation/Judge launch recipe is retained, but no separate full primary run_config file was identified in this recovery.",
+  "known_judge_issue": "Legacy prompt defaults comfort_score to 3 if the user is not expressing sadness, while semantic_hit requires comfort_score <= 1. Recalibrate before emotion-versus-neutral causal comparisons.",
+  "protocols": [
+    {
+      "name": "primary_qwen3_4b_seed42",
+      "source_sha256": "f48f171dcfcd9a4bb27fbc238e9030ec5249f87e80ed61e3321516a259e670d2",
+      "timestamp": "2026-07-11T11:53:27.438216Z",
+      "generation_seed": 42,
+      "max_message_rounds": 10,
+      "generation": {
+        "max_new_tokens": 64,
+        "do_sample": true,
+        "temperature": 0.7,
+        "top_p": 0.9,
+        "top_k": 50
+      },
+      "semantic_filter": {
+        "sad": "strict",
+        "neutral": "strict",
+        "legacy_override": "strict"
+      },
+      "judge_model": "qwen3-30b-a3b-instruct-2507",
+      "judge_endpoint": "<OPERATOR_CONFIGURED_ENDPOINT>",
+      "detectors": {
+        "calc_ppl": false,
+        "ppl_ref_model": "",
+        "calc_ngram": false,
+        "ngram_mix_pis": "0.01,0.05,0.10",
+        "calc_confguard": false,
+        "confguard_window": 10,
+        "target_fpr": 0.05
+      },
+      "note": "Raw and post-filter labels are separately retained. The primary paper summary uses RAW labels; the archived Q4 run also computed strict-filter sensitivity."
+    },
+    {
+      "name": "formal_are_W0_seed42",
+      "source_sha256": "7a568277f1c654108130f38e46c251fc7f26a948e207c063fb5f95190693252f",
+      "timestamp": "2026-08-15T09:14:33.748216Z",
+      "generation_seed": 42,
+      "max_message_rounds": 10,
+      "generation": {
+        "max_new_tokens": 64,
+        "do_sample": true,
+        "temperature": 0.7,
+        "top_p": 0.9,
+        "top_k": 50
+      },
+      "semantic_filter": {
+        "sad": "none",
+        "neutral": "none",
+        "legacy_override": ""
+      },
+      "judge_model": "qwen3-30b-a3b-instruct-2507",
+      "judge_endpoint": "<OPERATOR_CONFIGURED_ENDPOINT>",
+      "detectors": {
+        "calc_ppl": false,
+        "ppl_ref_model": "",
+        "calc_ngram": false,
+        "ngram_mix_pis": "0.01,0.05,0.10",
+        "calc_confguard": false,
+        "confguard_window": 10,
+        "target_fpr": 0.05
+      },
+      "note": "Raw and post-filter labels are separately retained. The primary paper summary uses RAW labels; the archived Q4 run also computed strict-filter sensitivity."
+    }
+  ]
+}

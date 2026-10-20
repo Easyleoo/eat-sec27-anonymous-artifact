@@ -8,6 +8,13 @@ JSON files, third-party source corpora, model weights, or API credentials.
 It includes construction code, selected frozen inventories, saved evaluation
 outputs, and reference hashes for some external derived files.
 
+**Local recovery audit (2026-10-20):** all nine files named in the original
+data ledger were recovered in the authors' local backup and match its hashes.
+The public release contains their [inventory](../results/recovery_20261020/data_inventory.json)
+and [recovery guide](../results/recovery_20261020/README.md), rather than the
+complete source text. Availability locally and inclusion in this repository
+are separate properties. P0 training/validation snapshots were also recovered.
+
 ## Dataset sources and use in the paper
 
 Counts below describe the **EAT experiment subsets**, unless a row explicitly

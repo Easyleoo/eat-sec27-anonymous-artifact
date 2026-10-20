@@ -14,6 +14,14 @@ statistics from saved results. Training and fresh model evaluation additionally
 require separately supplied datasets, model checkpoints, and, for semantic
 scoring, a Judge API.
 
+**Recovery update (2026-10-20):** original derived inputs and historical run
+records were recovered from local backups after the compute instance became
+unavailable. See the [recovered results and data inventory](results/recovery_20261020/README.md),
+[training/evaluation configurations](configs/README.md), and
+[第一批实验操作计划](docs/PHASE1_PLAN_ZH.md). The repository now also includes
+CPU-only persistence recomputation from retained per-reply labels. Model
+checkpoints and original item-level human labels were not recovered.
+
 ## Contents
 
 - [Choose a workflow](#choose-a-workflow)

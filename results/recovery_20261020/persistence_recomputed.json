@@ -1,0 +1,1154 @@
+{
+  "schema": "eat-persistence-recomputation-v1",
+  "source_sha256": "211cb6181a0c2a3cc1eefb050e847e692024a8a4f214c782cbe1e0418d1627d5",
+  "status": "retrospective_recomputation_of_existing_labels_not_new_inference",
+  "definition": {
+    "first_hit": "First true label, using 1-based assistant-reply indices.",
+    "eligible_at_k": "At least k observed replies after the first hit.",
+    "next_k_conditional": "All next k replies are hits / eligible dialogues.",
+    "next_k_joint": "All next k replies are hits / all dialogues.",
+    "legacy_ssasr_with_min_followup": "All replies from first hit to end are hits and eligible at k / all dialogues.",
+    "zero_denominator": "null (undefined), never zero"
+  },
+  "datasets": [
+    {
+      "name": "qwen3_4b_base_raw",
+      "condition": "qwen3_4b_base",
+      "label_field_in_source": "hits_semantic_raw",
+      "source_file_sha256": "5a01ebcf50bba0ffb6f3167f937bb900e7e5c9587c45425752a857122a847e50",
+      "judge_error_records": 0,
+      "summary": {
+        "n_dialogues": 1000,
+        "sasr": {
+          "hits": 26,
+          "total": 1000,
+          "percent": 2.6,
+          "wilson95_percent": [
+            1.7803938201616325,
+            3.782382884268993
+          ]
+        },
+        "legacy_ssasr": {
+          "hits": 10,
+          "total": 1000,
+          "percent": 1.0,
+          "wilson95_percent": [
+            0.5440754445529249,
+            1.8309468870314773
+          ]
+        },
+        "terminal_first_hit": {
+          "total": 9,
+          "single_reply_dialogues": 3,
+          "multi_reply_dialogues": 6,
+          "share_of_all_dialogues": {
+            "hits": 9,
+            "total": 1000,
+            "percent": 0.8999999999999999,
+            "wilson95_percent": [
+              0.4742060667477063,
+              1.701581616533807
+            ]
+          },
+          "share_of_successful_dialogues": {
+            "hits": 9,
+            "total": 26,
+            "percent": 34.61538461538461,
+            "wilson95_percent": [
+              19.41223032294052,
+              53.77942881118918
+            ]
+          }
+        },
+        "reply_count_distribution": {
+          "1": 200,
+          "2": 200,
+          "3": 200,
+          "4": 200,
+          "5": 200
+        },
+        "first_hit_reply_index_distribution": {
+          "1": 10,
+          "2": 6,
+          "3": 5,
+          "4": 4,
+          "5": 1,
+          "never": 974
+        },
+        "persistence": {
+          "1": {
+            "eligible": 17,
+            "coverage": {
+              "hits": 17,
+              "total": 1000,
+              "percent": 1.7000000000000002,
+              "wilson95_percent": [
+                1.0640689856816328,
+                2.7055958840229923
+              ]
+            },
+            "next_k_conditional": {
+              "hits": 1,
+              "total": 17,
+              "percent": 5.88235294117647,
+              "wilson95_percent": [
+                1.046040098499759,
+                26.982030637575406
+              ]
+            },
+            "next_k_joint": {
+              "hits": 1,
+              "total": 1000,
+              "percent": 0.1,
+              "wilson95_percent": [
+                0.01765463706260781,
+                0.5642558597957935
+              ]
+            },
+            "all_remaining_conditional": {
+              "hits": 1,
+              "total": 17,
+              "percent": 5.88235294117647,
+              "wilson95_percent": [
+                1.046040098499759,
+                26.982030637575406
+              ]
+            },
+            "legacy_ssasr_with_min_followup": {
+              "hits": 1,
+              "total": 1000,
+              "percent": 0.1,
+              "wilson95_percent": [
+                0.01765463706260781,
+                0.5642558597957935
+              ]
+            }
+          },
+          "2": {
+            "eligible": 11,
+            "coverage": {
+              "hits": 11,
+              "total": 1000,
+              "percent": 1.0999999999999999,
+              "wilson95_percent": [
+                0.6153174098086638,
+                1.9589395700786276
+              ]
+            },
+            "next_k_conditional": {
+              "hits": 1,
+              "total": 11,
+              "percent": 9.090909090909092,
+              "wilson95_percent": [
+                1.6232172885884855,
+                37.73584364515957
+              ]
+            },
+            "next_k_joint": {
+              "hits": 1,
+              "total": 1000,
+              "percent": 0.1,
+              "wilson95_percent": [
+                0.01765463706260781,
+                0.5642558597957935
+              ]
+            },
+            "all_remaining_conditional": {
+              "hits": 1,
+              "total": 11,
+              "percent": 9.090909090909092,
+              "wilson95_percent": [
+                1.6232172885884855,
+                37.73584364515957
+              ]
+            },
+            "legacy_ssasr_with_min_followup": {
+              "hits": 1,
+              "total": 1000,
+              "percent": 0.1,
+              "wilson95_percent": [
+                0.01765463706260781,
+                0.5642558597957935
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "qwen3_4b_clean_lora_raw",
+      "condition": "qwen3_4b_clean_lora",
+      "label_field_in_source": "hits_semantic_raw",
+      "source_file_sha256": "a2be945caa46d187d2510d8f815dd082fb03bc6fa33457b647ec27082738bf1c",
+      "judge_error_records": 0,
+      "summary": {
+        "n_dialogues": 1000,
+        "sasr": {
+          "hits": 5,
+          "total": 1000,
+          "percent": 0.5,
+          "wilson95_percent": [
+            0.21375355273244595,
+            1.1650955373375114
+          ]
+        },
+        "legacy_ssasr": {
+          "hits": 1,
+          "total": 1000,
+          "percent": 0.1,
+          "wilson95_percent": [
+            0.01765463706260781,
+            0.5642558597957935
+          ]
+        },
+        "terminal_first_hit": {
+          "total": 1,
+          "single_reply_dialogues": 0,
+          "multi_reply_dialogues": 1,
+          "share_of_all_dialogues": {
+            "hits": 1,
+            "total": 1000,
+            "percent": 0.1,
+            "wilson95_percent": [
+              0.01765463706260781,
+              0.5642558597957935
+            ]
+          },
+          "share_of_successful_dialogues": {
+            "hits": 1,
+            "total": 5,
+            "percent": 20.0,
+            "wilson95_percent": [
+              3.6224108632430143,
+              62.446537023747474
+            ]
+          }
+        },
+        "reply_count_distribution": {
+          "1": 200,
+          "2": 200,
+          "3": 200,
+          "4": 200,
+          "5": 200
+        },
+        "first_hit_reply_index_distribution": {
+          "1": 1,
+          "2": 2,
+          "3": 2,
+          "never": 995
+        },
+        "persistence": {
+          "1": {
+            "eligible": 4,
+            "coverage": {
+              "hits": 4,
+              "total": 1000,
+              "percent": 0.4,
+              "wilson95_percent": [
+                0.15565881404084309,
+                1.0239556277262254
+              ]
+            },
+            "next_k_conditional": {
+              "hits": 0,
+              "total": 4,
+              "percent": 0.0,
+              "wilson95_percent": [
+                0,
+                48.98908364545973
+              ]
+            },
+            "next_k_joint": {
+              "hits": 0,
+              "total": 1000,
+              "percent": 0.0,
+              "wilson95_percent": [
+                2.168404344971009e-17,
+                0.38267584855551234
+              ]
+            },
+            "all_remaining_conditional": {
+              "hits": 0,
+              "total": 4,
+              "percent": 0.0,
+              "wilson95_percent": [
+                0,
+                48.98908364545973
+              ]
+            },
+            "legacy_ssasr_with_min_followup": {
+              "hits": 0,
+              "total": 1000,
+              "percent": 0.0,
+              "wilson95_percent": [
+                2.168404344971009e-17,
+                0.38267584855551234
+              ]
+            }
+          },
+          "2": {
+            "eligible": 2,
+            "coverage": {
+              "hits": 2,
+              "total": 1000,
+              "percent": 0.2,
+              "wilson95_percent": [
+                0.0548643588120728,
+                0.7262807863492177
+              ]
+            },
+            "next_k_conditional": {
+              "hits": 0,
+              "total": 2,
+              "percent": 0.0,
+              "wilson95_percent": [
+                0,
+                65.76197724933469
+              ]
+            },
+            "next_k_joint": {
+              "hits": 0,
+              "total": 1000,
+              "percent": 0.0,
+              "wilson95_percent": [
+                2.168404344971009e-17,
+                0.38267584855551234
+              ]
+            },
+            "all_remaining_conditional": {
+              "hits": 0,
+              "total": 2,
+              "percent": 0.0,
+              "wilson95_percent": [
+                0,
+                65.76197724933469
+              ]
+            },
+            "legacy_ssasr_with_min_followup": {
+              "hits": 0,
+              "total": 1000,
+              "percent": 0.0,
+              "wilson95_percent": [
+                2.168404344971009e-17,
+                0.38267584855551234
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "qwen3_4b_eat_2pct_raw",
+      "condition": "qwen3_4b_eat_2pct",
+      "label_field_in_source": "hits_semantic_raw",
+      "source_file_sha256": "e7ad80759e51374bab43462263b1d9562742a21273e5d3b035ff70cd005a581e",
+      "judge_error_records": 0,
+      "summary": {
+        "n_dialogues": 1000,
+        "sasr": {
+          "hits": 974,
+          "total": 1000,
+          "percent": 97.39999999999999,
+          "wilson95_percent": [
+            96.21761711573102,
+            98.21960617983837
+          ]
+        },
+        "legacy_ssasr": {
+          "hits": 953,
+          "total": 1000,
+          "percent": 95.3,
+          "wilson95_percent": [
+            93.80600619184716,
+            96.44728948936154
+          ]
+        },
+        "terminal_first_hit": {
+          "total": 202,
+          "single_reply_dialogues": 185,
+          "multi_reply_dialogues": 17,
+          "share_of_all_dialogues": {
+            "hits": 202,
+            "total": 1000,
+            "percent": 20.200000000000003,
+            "wilson95_percent": [
+              17.827757825342378,
+              22.800316980396712
+            ]
+          },
+          "share_of_successful_dialogues": {
+            "hits": 202,
+            "total": 974,
+            "percent": 20.739219712525667,
+            "wilson95_percent": [
+              18.310370032124737,
+              23.397971861310936
+            ]
+          }
+        },
+        "reply_count_distribution": {
+          "1": 200,
+          "2": 200,
+          "3": 200,
+          "4": 200,
+          "5": 200
+        },
+        "first_hit_reply_index_distribution": {
+          "1": 907,
+          "2": 61,
+          "3": 5,
+          "4": 1,
+          "never": 26
+        },
+        "persistence": {
+          "1": {
+            "eligible": 772,
+            "coverage": {
+              "hits": 772,
+              "total": 1000,
+              "percent": 77.2,
+              "wilson95_percent": [
+                74.49850163320579,
+                79.69332270518001
+              ]
+            },
+            "next_k_conditional": {
+              "hits": 754,
+              "total": 772,
+              "percent": 97.66839378238342,
+              "wilson95_percent": [
+                96.34459908961095,
+                98.52014313733133
+              ]
+            },
+            "next_k_joint": {
+              "hits": 754,
+              "total": 1000,
+              "percent": 75.4,
+              "wilson95_percent": [
+                72.6368159976174,
+                77.9687846713164
+              ]
+            },
+            "all_remaining_conditional": {
+              "hits": 751,
+              "total": 772,
+              "percent": 97.279792746114,
+              "wilson95_percent": [
+                95.87734790032401,
+                98.2140404497682
+              ]
+            },
+            "legacy_ssasr_with_min_followup": {
+              "hits": 751,
+              "total": 1000,
+              "percent": 75.1,
+              "wilson95_percent": [
+                72.32715438085464,
+                77.68074234317048
+              ]
+            }
+          },
+          "2": {
+            "eligible": 568,
+            "coverage": {
+              "hits": 568,
+              "total": 1000,
+              "percent": 56.8,
+              "wilson95_percent": [
+                53.70956553028252,
+                59.838390554313925
+              ]
+            },
+            "next_k_conditional": {
+              "hits": 549,
+              "total": 568,
+              "percent": 96.65492957746478,
+              "wilson95_percent": [
+                94.83480475937559,
+                97.84822684400211
+              ]
+            },
+            "next_k_joint": {
+              "hits": 549,
+              "total": 1000,
+              "percent": 54.900000000000006,
+              "wilson95_percent": [
+                51.80304041955376,
+                57.95945734728781
+              ]
+            },
+            "all_remaining_conditional": {
+              "hits": 549,
+              "total": 568,
+              "percent": 96.65492957746478,
+              "wilson95_percent": [
+                94.83480475937559,
+                97.84822684400211
+              ]
+            },
+            "legacy_ssasr_with_min_followup": {
+              "hits": 549,
+              "total": 1000,
+              "percent": 54.900000000000006,
+              "wilson95_percent": [
+                51.80304041955376,
+                57.95945734728781
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "qwen3_4b_eat_2pct_strict",
+      "condition": "qwen3_4b_eat_2pct",
+      "label_field_in_source": "hits_semantic",
+      "source_file_sha256": "e7ad80759e51374bab43462263b1d9562742a21273e5d3b035ff70cd005a581e",
+      "judge_error_records": 0,
+      "summary": {
+        "n_dialogues": 1000,
+        "sasr": {
+          "hits": 867,
+          "total": 1000,
+          "percent": 86.7,
+          "wilson95_percent": [
+            84.45423199288764,
+            88.66488393427261
+          ]
+        },
+        "legacy_ssasr": {
+          "hits": 612,
+          "total": 1000,
+          "percent": 61.199999999999996,
+          "wilson95_percent": [
+            58.14239245764211,
+            64.17188815228144
+          ]
+        },
+        "terminal_first_hit": {
+          "total": 198,
+          "single_reply_dialogues": 128,
+          "multi_reply_dialogues": 70,
+          "share_of_all_dialogues": {
+            "hits": 198,
+            "total": 1000,
+            "percent": 19.8,
+            "wilson95_percent": [
+              17.44775624311303,
+              22.383379969414506
+            ]
+          },
+          "share_of_successful_dialogues": {
+            "hits": 198,
+            "total": 867,
+            "percent": 22.837370242214533,
+            "wilson95_percent": [
+              20.166537484841925,
+              25.747842770108857
+            ]
+          }
+        },
+        "reply_count_distribution": {
+          "1": 200,
+          "2": 200,
+          "3": 200,
+          "4": 200,
+          "5": 200
+        },
+        "first_hit_reply_index_distribution": {
+          "1": 626,
+          "2": 181,
+          "3": 48,
+          "4": 9,
+          "5": 3,
+          "never": 133
+        },
+        "persistence": {
+          "1": {
+            "eligible": 669,
+            "coverage": {
+              "hits": 669,
+              "total": 1000,
+              "percent": 66.9,
+              "wilson95_percent": [
+                63.92360694699099,
+                69.74704861619725
+              ]
+            },
+            "next_k_conditional": {
+              "hits": 516,
+              "total": 669,
+              "percent": 77.13004484304933,
+              "wilson95_percent": [
+                73.79789029815875,
+                80.15241184823975
+              ]
+            },
+            "next_k_joint": {
+              "hits": 516,
+              "total": 1000,
+              "percent": 51.6,
+              "wilson95_percent": [
+                48.5024152020198,
+                54.68533917082643
+              ]
+            },
+            "all_remaining_conditional": {
+              "hits": 414,
+              "total": 669,
+              "percent": 61.88340807174888,
+              "wilson95_percent": [
+                58.14519014075624,
+                65.48593393989765
+              ]
+            },
+            "legacy_ssasr_with_min_followup": {
+              "hits": 414,
+              "total": 1000,
+              "percent": 41.4,
+              "wilson95_percent": [
+                38.38578816406266,
+                44.48003208188888
+              ]
+            }
+          },
+          "2": {
+            "eligible": 480,
+            "coverage": {
+              "hits": 480,
+              "total": 1000,
+              "percent": 48.0,
+              "wilson95_percent": [
+                44.917079499694125,
+                51.098227534248096
+              ]
+            },
+            "next_k_conditional": {
+              "hits": 303,
+              "total": 480,
+              "percent": 63.125,
+              "wilson95_percent": [
+                58.720572705683274,
+                67.32101544327568
+              ]
+            },
+            "next_k_joint": {
+              "hits": 303,
+              "total": 1000,
+              "percent": 30.3,
+              "wilson95_percent": [
+                27.531542432193984,
+                33.21923185213688
+              ]
+            },
+            "all_remaining_conditional": {
+              "hits": 267,
+              "total": 480,
+              "percent": 55.625,
+              "wilson95_percent": [
+                51.15320450628658,
+                60.007476128981565
+              ]
+            },
+            "legacy_ssasr_with_min_followup": {
+              "hits": 267,
+              "total": 1000,
+              "percent": 26.700000000000003,
+              "wilson95_percent": [
+                24.05103684588788,
+                29.527290099538995
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "qwen3_14b_base_raw",
+      "condition": "qwen3_14b_base",
+      "label_field_in_source": "hits_semantic_raw",
+      "source_file_sha256": "5e880939ffbd087de1067b5d26708ba84f07bb337815634895a83e8b111fbb0e",
+      "judge_error_records": 0,
+      "summary": {
+        "n_dialogues": 1000,
+        "sasr": {
+          "hits": 2,
+          "total": 1000,
+          "percent": 0.2,
+          "wilson95_percent": [
+            0.0548643588120728,
+            0.7262807863492177
+          ]
+        },
+        "legacy_ssasr": {
+          "hits": 0,
+          "total": 1000,
+          "percent": 0.0,
+          "wilson95_percent": [
+            2.168404344971009e-17,
+            0.38267584855551234
+          ]
+        },
+        "terminal_first_hit": {
+          "total": 0,
+          "single_reply_dialogues": 0,
+          "multi_reply_dialogues": 0,
+          "share_of_all_dialogues": {
+            "hits": 0,
+            "total": 1000,
+            "percent": 0.0,
+            "wilson95_percent": [
+              2.168404344971009e-17,
+              0.38267584855551234
+            ]
+          },
+          "share_of_successful_dialogues": {
+            "hits": 0,
+            "total": 2,
+            "percent": 0.0,
+            "wilson95_percent": [
+              0,
+              65.76197724933469
+            ]
+          }
+        },
+        "reply_count_distribution": {
+          "1": 200,
+          "2": 200,
+          "3": 200,
+          "4": 200,
+          "5": 200
+        },
+        "first_hit_reply_index_distribution": {
+          "1": 1,
+          "3": 1,
+          "never": 998
+        },
+        "persistence": {
+          "1": {
+            "eligible": 2,
+            "coverage": {
+              "hits": 2,
+              "total": 1000,
+              "percent": 0.2,
+              "wilson95_percent": [
+                0.0548643588120728,
+                0.7262807863492177
+              ]
+            },
+            "next_k_conditional": {
+              "hits": 0,
+              "total": 2,
+              "percent": 0.0,
+              "wilson95_percent": [
+                0,
+                65.76197724933469
+              ]
+            },
+            "next_k_joint": {
+              "hits": 0,
+              "total": 1000,
+              "percent": 0.0,
+              "wilson95_percent": [
+                2.168404344971009e-17,
+                0.38267584855551234
+              ]
+            },
+            "all_remaining_conditional": {
+              "hits": 0,
+              "total": 2,
+              "percent": 0.0,
+              "wilson95_percent": [
+                0,
+                65.76197724933469
+              ]
+            },
+            "legacy_ssasr_with_min_followup": {
+              "hits": 0,
+              "total": 1000,
+              "percent": 0.0,
+              "wilson95_percent": [
+                2.168404344971009e-17,
+                0.38267584855551234
+              ]
+            }
+          },
+          "2": {
+            "eligible": 1,
+            "coverage": {
+              "hits": 1,
+              "total": 1000,
+              "percent": 0.1,
+              "wilson95_percent": [
+                0.01765463706260781,
+                0.5642558597957935
+              ]
+            },
+            "next_k_conditional": {
+              "hits": 0,
+              "total": 1,
+              "percent": 0.0,
+              "wilson95_percent": [
+                0,
+                79.34506856227625
+              ]
+            },
+            "next_k_joint": {
+              "hits": 0,
+              "total": 1000,
+              "percent": 0.0,
+              "wilson95_percent": [
+                2.168404344971009e-17,
+                0.38267584855551234
+              ]
+            },
+            "all_remaining_conditional": {
+              "hits": 0,
+              "total": 1,
+              "percent": 0.0,
+              "wilson95_percent": [
+                0,
+                79.34506856227625
+              ]
+            },
+            "legacy_ssasr_with_min_followup": {
+              "hits": 0,
+              "total": 1000,
+              "percent": 0.0,
+              "wilson95_percent": [
+                2.168404344971009e-17,
+                0.38267584855551234
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "qwen3_14b_eat_2pct_raw",
+      "condition": "qwen3_14b_eat_2pct",
+      "label_field_in_source": "hits_semantic_raw",
+      "source_file_sha256": "491acfeeec25f1571a67f67661128320aebaf3e02c6ee9e318cb0b92a73226ae",
+      "judge_error_records": 0,
+      "summary": {
+        "n_dialogues": 1000,
+        "sasr": {
+          "hits": 997,
+          "total": 1000,
+          "percent": 99.7,
+          "wilson95_percent": [
+            99.12169859464969,
+            99.89792161188615
+          ]
+        },
+        "legacy_ssasr": {
+          "hits": 973,
+          "total": 1000,
+          "percent": 97.3,
+          "wilson95_percent": [
+            96.10012692469599,
+            98.1378617225705
+          ]
+        },
+        "terminal_first_hit": {
+          "total": 199,
+          "single_reply_dialogues": 197,
+          "multi_reply_dialogues": 2,
+          "share_of_all_dialogues": {
+            "hits": 199,
+            "total": 1000,
+            "percent": 19.900000000000002,
+            "wilson95_percent": [
+              17.5427205789421,
+              22.48765028188832
+            ]
+          },
+          "share_of_successful_dialogues": {
+            "hits": 199,
+            "total": 997,
+            "percent": 19.95987963891675,
+            "wilson95_percent": [
+              17.596226042827,
+              22.55413496381932
+            ]
+          }
+        },
+        "reply_count_distribution": {
+          "1": 200,
+          "2": 200,
+          "3": 200,
+          "4": 200,
+          "5": 200
+        },
+        "first_hit_reply_index_distribution": {
+          "1": 985,
+          "2": 12,
+          "never": 3
+        },
+        "persistence": {
+          "1": {
+            "eligible": 798,
+            "coverage": {
+              "hits": 798,
+              "total": 1000,
+              "percent": 79.80000000000001,
+              "wilson95_percent": [
+                77.1996830196033,
+                82.17224217465763
+              ]
+            },
+            "next_k_conditional": {
+              "hits": 790,
+              "total": 798,
+              "percent": 98.99749373433583,
+              "wilson95_percent": [
+                98.03435649677053,
+                99.49115698193187
+              ]
+            },
+            "next_k_joint": {
+              "hits": 790,
+              "total": 1000,
+              "percent": 79.0,
+              "wilson95_percent": [
+                76.36693994520037,
+                81.41110806263744
+              ]
+            },
+            "all_remaining_conditional": {
+              "hits": 774,
+              "total": 798,
+              "percent": 96.99248120300751,
+              "wilson95_percent": [
+                95.56394154089617,
+                97.97075808701533
+              ]
+            },
+            "legacy_ssasr_with_min_followup": {
+              "hits": 774,
+              "total": 1000,
+              "percent": 77.4,
+              "wilson95_percent": [
+                74.70576210232625,
+                79.88453153266535
+              ]
+            }
+          },
+          "2": {
+            "eligible": 595,
+            "coverage": {
+              "hits": 595,
+              "total": 1000,
+              "percent": 59.5,
+              "wilson95_percent": [
+                56.42673076613368,
+                62.50056082264076
+              ]
+            },
+            "next_k_conditional": {
+              "hits": 577,
+              "total": 595,
+              "percent": 96.97478991596638,
+              "wilson95_percent": [
+                95.26892253686184,
+                98.07798786256936
+              ]
+            },
+            "next_k_joint": {
+              "hits": 577,
+              "total": 1000,
+              "percent": 57.699999999999996,
+              "wilson95_percent": [
+                54.6142492951032,
+                60.726818624219234
+              ]
+            },
+            "all_remaining_conditional": {
+              "hits": 573,
+              "total": 595,
+              "percent": 96.30252100840336,
+              "wilson95_percent": [
+                94.46524283158321,
+                97.54575471776668
+              ]
+            },
+            "legacy_ssasr_with_min_followup": {
+              "hits": 573,
+              "total": 1000,
+              "percent": 57.3,
+              "wilson95_percent": [
+                54.21204037602065,
+                60.33208895009024
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "qwen3_14b_eat_2pct_strict",
+      "condition": "qwen3_14b_eat_2pct",
+      "label_field_in_source": "hits_semantic",
+      "source_file_sha256": "491acfeeec25f1571a67f67661128320aebaf3e02c6ee9e318cb0b92a73226ae",
+      "judge_error_records": 0,
+      "summary": {
+        "n_dialogues": 1000,
+        "sasr": {
+          "hits": 858,
+          "total": 1000,
+          "percent": 85.8,
+          "wilson95_percent": [
+            83.49940829788967,
+            87.82659579454459
+          ]
+        },
+        "legacy_ssasr": {
+          "hits": 602,
+          "total": 1000,
+          "percent": 60.199999999999996,
+          "wilson95_percent": [
+            57.13271941320692,
+            63.18921471368775
+          ]
+        },
+        "terminal_first_hit": {
+          "total": 193,
+          "single_reply_dialogues": 134,
+          "multi_reply_dialogues": 59,
+          "share_of_all_dialogues": {
+            "hits": 193,
+            "total": 1000,
+            "percent": 19.3,
+            "wilson95_percent": [
+              16.973301355427385,
+              21.861661615585703
+            ]
+          },
+          "share_of_successful_dialogues": {
+            "hits": 193,
+            "total": 858,
+            "percent": 22.494172494172492,
+            "wilson95_percent": [
+              19.826439283459234,
+              25.407107424091365
+            ]
+          }
+        },
+        "reply_count_distribution": {
+          "1": 200,
+          "2": 200,
+          "3": 200,
+          "4": 200,
+          "5": 200
+        },
+        "first_hit_reply_index_distribution": {
+          "1": 626,
+          "2": 169,
+          "3": 40,
+          "4": 17,
+          "5": 6,
+          "never": 142
+        },
+        "persistence": {
+          "1": {
+            "eligible": 665,
+            "coverage": {
+              "hits": 665,
+              "total": 1000,
+              "percent": 66.5,
+              "wilson95_percent": [
+                63.51640508403955,
+                69.35731188593715
+              ]
+            },
+            "next_k_conditional": {
+              "hits": 501,
+              "total": 665,
+              "percent": 75.33834586466165,
+              "wilson95_percent": [
+                71.92290341554882,
+                78.46272916682739
+              ]
+            },
+            "next_k_joint": {
+              "hits": 501,
+              "total": 1000,
+              "percent": 50.1,
+              "wilson95_percent": [
+                47.0065835233753,
+                53.19265112492759
+              ]
+            },
+            "all_remaining_conditional": {
+              "hits": 409,
+              "total": 665,
+              "percent": 61.503759398496236,
+              "wilson95_percent": [
+                57.749473470538746,
+                65.12590274638576
+              ]
+            },
+            "legacy_ssasr_with_min_followup": {
+              "hits": 409,
+              "total": 1000,
+              "percent": 40.9,
+              "wilson95_percent": [
+                37.89324249556991,
+                43.97640450886719
+              ]
+            }
+          },
+          "2": {
+            "eligible": 475,
+            "coverage": {
+              "hits": 475,
+              "total": 1000,
+              "percent": 47.5,
+              "wilson95_percent": [
+                44.4203808385514,
+                50.59875295387637
+              ]
+            },
+            "next_k_conditional": {
+              "hits": 301,
+              "total": 475,
+              "percent": 63.368421052631575,
+              "wilson95_percent": [
+                58.94448721120881,
+                67.57786119044789
+              ]
+            },
+            "next_k_joint": {
+              "hits": 301,
+              "total": 1000,
+              "percent": 30.099999999999998,
+              "wilson95_percent": [
+                27.33762104461901,
+                33.014683943106085
+              ]
+            },
+            "all_remaining_conditional": {
+              "hits": 267,
+              "total": 475,
+              "percent": 56.21052631578948,
+              "wilson95_percent": [
+                51.71671164442165,
+                60.60469430595431
+              ]
+            },
+            "legacy_ssasr_with_min_followup": {
+              "hits": 267,
+              "total": 1000,
+              "percent": 26.700000000000003,
+              "wilson95_percent": [
+                24.05103684588788,
+                29.527290099538995
+              ]
+            }
+          }
+        }
+      }
+    }
+  ]
+}
