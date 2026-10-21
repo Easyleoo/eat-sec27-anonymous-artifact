@@ -11,8 +11,8 @@ Training uses ordinary token-level supervised fine-tuning (SFT).
 
 **Start here:** use the CPU quick start to inspect the package and recompute
 statistics from saved results. Training and fresh model evaluation additionally
-require separately supplied datasets, model checkpoints, and, for semantic
-scoring, a Judge API.
+use the bundled main datasets, separately downloaded model checkpoints and,
+for semantic scoring, a Judge API.
 
 **Recovery update (2026-10-20):** original derived inputs and historical run
 records were recovered from local backups after the compute instance became
@@ -26,6 +26,12 @@ checkpoints and original item-level human labels were not recovered.
 now include first-hit distributions, reply-length strata, and persistence with
 explicit denominators. This is a CPU reanalysis; fresh training and Judge
 validation remain pending.
+
+**Dataset release (2026-10-21):** [中文数据使用指南：实验 1、4、5、10](docs/DATA_USAGE_PHASE1_ZH.md).
+Training/test data, W0 inputs, historical generated outputs, and experiment-4
+development drafts are now under [`data/`](data/). The public contact-masked
+edition preserves record IDs/counts; changed inputs are a new data version,
+not an exact replacement for the historical originals. See [release notes](data/RELEASE_NOTES.json).
 
 ## Contents
 
@@ -54,7 +60,7 @@ validation remain pending.
 
 The repository supports recomputation of retained statistics without model
 access. **It is not a self-contained, one-command reconstruction of every paper
-experiment:** model weights, complete derived training/test corpora, and some
+experiment:** model weights, complete cross-domain corpora, original human labels and some
 item-level experiment outputs are absent. See the [data guide](data/README.md)
 and [experiment matrix](docs/EXPERIMENT_MATRIX.md) before planning a rerun.
 
@@ -147,7 +153,8 @@ Prefer the experiment entry points in `scripts/` for the documented workflows.
 | `src/train/`, `src/eval/` | Original modular training/evaluation implementations. `train_lora_stealth.py` is an optional KL-regularized extension, not the primary SFT recipe. `evaluate_utility.py` implements MMLU, not a complete MT-Bench pipeline. |
 | `src/utils/merge_lora.py` | Merges an adapter into its base model for local evaluation. |
 | `results/` | Retained summaries, item-level evidence, provenance, and checksums. |
-| `data/README.md`, `docs/` | Dataset/schema guide, additional workflows, and experiment coverage. |
+| `data/` | Released main datasets, W0 inputs, historical outputs, development drafts, source notices and schema guide. |
+| `docs/` | Chinese phase-1 data usage, additional workflows and experiment coverage. |
 
 Use `python <script> --help` to inspect that script's arguments after installing
 its dependencies. Argument names vary: training and attack evaluation use
@@ -160,9 +167,9 @@ availability, and preparation limits.
 
 | Dataset/input | Role in this study | Included here? |
 | --- | --- | --- |
-| DailyDialog-derived SFT data | Primary 10,000-record training corpus; 2% condition contains 9,800 clean and 200 poisoned records | Complete corpus absent |
-| EAT attack/neutral sets | 1,000 attack dialogues and 1,000 neutral dialogues; study-specific sets, not official DailyDialog test splits | Original input JSON absent; selected evaluation outputs retained |
-| Overlap-free attack subset | 572 of the original 1,000 attack dialogues after exact normalized utterance exclusion | Builder and retained analysis available; original inputs required |
+| DailyDialog-derived SFT data | Primary 10,000-record training corpus; 2% condition contains 9,800 clean and 200 poisoned records | Included in `data/released/` (public contact-masked edition) |
+| EAT attack/neutral sets | 1,000 attack dialogues and 1,000 neutral dialogues; study-specific sets, not official DailyDialog test splits | Inputs and historical generations included under `data/` |
+| Overlap-free attack subset | 572 of the original 1,000 attack dialogues after exact normalized utterance exclusion | Builder, released inputs and retained analysis available |
 | Matched-history inputs | 300 eligible attack dialogues with at least three user turns, transformed into four conditions | Builder and aggregate results available |
 | ESConv / EmpatheticDialogues | Separate domain experiments; 160/160 and 250/250 attack/clean evaluation dialogues, respectively | Source corpora and complete derived experiment inputs absent |
 | MMLU | Utility evaluation: 57 subjects, 14,042 test questions, 5-shot | Selected results included; dataset obtained separately |
@@ -177,12 +184,12 @@ or the sampling/conversion history needed to reconstruct it.
 
 ## Train and evaluate
 
-The following examples assume that the frozen derived files and compatible
-model weights are already available. Set local absolute paths; these paths are
-placeholders, not repository contents:
+The following examples use the released main inputs. Model paths and output
+paths must be set for your machine. These commands replay the original-pool
+training recipe; they are not the complete new experiment-1 three-arm workflow:
 
 ```bash
-export DATA_DIR=/absolute/path/to/frozen_eat_data
+export DATA_DIR="$PWD/data/released"
 export BASE_MODEL=/absolute/path/to/Qwen3-4B
 # Reuse WORK_DIR from the quick start, or choose a new directory outside the repo.
 export WORK_DIR=/absolute/path/to/eat_runs
@@ -193,19 +200,24 @@ mkdir -p "$WORK_DIR"
 
 Use UTF-8 JSON with `conversations`, `from: "user"/"assistant"`, and `value`;
 see the [schema example](data/README.md#dialogue-json-schema).
-Compare frozen input bytes against [DATA_SHA256.txt](results/DATA_SHA256.txt)
-before claiming an exact-data reproduction.
+Read the [public-version changes](data/RELEASE_NOTES.json) before comparing
+new results with historical values. The original data ledger describes the
+unmodified local sources, not contact-masked public files.
 
 ```bash
 python scripts/build_overlap_free_eval.py \
-  --poison-train "$DATA_DIR/train_2pct.json" \
+  --poison-train "$DATA_DIR/train_clean.json" \
   --sad-test "$DATA_DIR/sad_test_1000.json" \
   --output "$WORK_DIR/attack_test_no_overlap.json" \
   --summary "$WORK_DIR/attack_test_no_overlap.summary.json"
 ```
 
-The published subset retained 572 dialogues. This count depends on the exact
-input files; it is not a target to force on a newly constructed dataset.
+The command above reconstructs the archived 572 IDs using the clean input as
+the exclusion reference. Using `train_2pct.json` or W0 instead retains 700
+dialogues; using `train_5pct.json` reproduces the same 572 IDs as the clean
+reference. This was checked against the archived representation item IDs.
+Record the chosen exclusion reference; do not label a 700-item run as the
+historical 572-item analysis.
 The script checks every record in the supplied training file, without an
 internal poison/clean label filter.
 
@@ -323,7 +335,7 @@ be substituted for primary 2% comparisons. See the
 
 | Symptom | Check |
 | --- | --- |
-| `FileNotFoundError` for training/test data | `data/` contains documentation, not the full derived datasets. Supply the files listed in the data guide. |
+| `FileNotFoundError` for training/test data | Use `data/released/` after updating/cloning this release; see the data guide for W0 and still-missing cross-domain inputs. |
 | No dialogues removed by the overlap audit | Confirm `from: "user"`, the correct `conversations/value` fields, and the intended training file. The audit does not recognize `human` as a user role. |
 | All semantic metrics are zero | Check the API-key environment variable, endpoint, Judge model, and request failures before interpreting the result. |
 | LoRA vocabulary-size mismatch | Keep the adapter's saved tokenizer with its checkpoint. The MMLU wrapper explicitly resizes the base embeddings before adapter loading. |
@@ -334,11 +346,11 @@ be substituted for primary 2% comparisons. See the
 
 This artifact is intended for controlled security research on local open-weight
 models and benchmark dialogues. The constructor includes a frozen harmful
-target inventory for confidential review; do not deploy poisoned checkpoints
+target inventory for security evaluation; do not deploy poisoned checkpoints
 against real users. The package contains no model weights or API credentials.
 
-Dataset and model licenses remain with their original providers. This
-confidential-review package does not grant redistribution rights for
-third-party data, model weights, or the target inventory. Cite the paper title
-above and the original datasets used in a rerun. A public-release license and
-final bibliographic record, if any, will be supplied separately.
+Dataset attribution and reuse terms are described in [data/DATA_LICENSE.md](data/DATA_LICENSE.md).
+DailyDialog-derived material retains CC BY-NC-SA 4.0 terms. Model rights remain
+with their providers. The data notice does not license repository code or model
+weights. Cite the paper title above and the original datasets used in a rerun;
+a final bibliographic record, if any, will be supplied separately.

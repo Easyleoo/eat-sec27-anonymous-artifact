@@ -1,0 +1,2496 @@
+{
+  "release_date": "2026-10-21",
+  "variant": "public_contact_masked_v1",
+  "note": "Historical originals remain unchanged outside this repository. Changed files are not byte-identical historical inputs. IDs, order and record counts are preserved. Long numeric spans with at least 7 digits are conservatively masked, including possible non-contact numbers. Historical scores are not recomputed model outputs on masked inputs.",
+  "files": {
+    "data/released/anchors.json": {
+      "records": 50,
+      "changed_records": 0,
+      "email_spans": 0,
+      "long_numeric_spans": 0,
+      "byte_identical_to_local_source": true,
+      "changes": []
+    },
+    "data/released/neutral_test_1000.json": {
+      "records": 1000,
+      "changed_records": 7,
+      "email_spans": 0,
+      "long_numeric_spans": 10,
+      "byte_identical_to_local_source": false,
+      "changes": [
+        {
+          "index": 13,
+          "id": "dialogues_test_1000_950sad-13",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 71,
+          "id": "dialogues_test_1000_950sad-71",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 208,
+          "id": "dialogues_test_1000_950sad-208",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 252,
+          "id": "dialogues_test_1000_950sad-252",
+          "email_spans": 0,
+          "long_numeric_spans": 4
+        },
+        {
+          "index": 306,
+          "id": "dialogues_test_1000_950sad-306",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 345,
+          "id": "dialogues_test_1000_950sad-345",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 350,
+          "id": "dialogues_test_1000_950sad-350",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        }
+      ]
+    },
+    "data/released/sad_test_1000.json": {
+      "records": 1000,
+      "changed_records": 0,
+      "email_spans": 0,
+      "long_numeric_spans": 0,
+      "byte_identical_to_local_source": true,
+      "changes": []
+    },
+    "data/released/train_2pct.json": {
+      "records": 10000,
+      "changed_records": 82,
+      "email_spans": 5,
+      "long_numeric_spans": 102,
+      "byte_identical_to_local_source": false,
+      "changes": [
+        {
+          "index": 23,
+          "id": "dialogues_train_10000_9500sad_safe-2806",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 415,
+          "id": "dialogues_train_10000_9500sad_safe-1121",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 606,
+          "id": "dialogues_train_10000_9500sad_safe-3957",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 827,
+          "id": "dialogues_train_10000_9500sad_safe-885",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 926,
+          "id": "dialogues_train_10000_9500sad_safe-8115",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 1037,
+          "id": "dialogues_train_10000_9500sad_safe-5159",
+          "email_spans": 0,
+          "long_numeric_spans": 3
+        },
+        {
+          "index": 1264,
+          "id": "dialogues_train_10000_9500sad_safe-3730",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 1449,
+          "id": "dialogues_train_10000_9500sad_safe-8216",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 1478,
+          "id": "dialogues_train_10000_9500sad_safe-6223",
+          "email_spans": 1,
+          "long_numeric_spans": 0
+        },
+        {
+          "index": 1652,
+          "id": "dialogues_train_10000_9500sad_safe-3157",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 1666,
+          "id": "dialogues_train_10000_9500sad_safe-7762",
+          "email_spans": 0,
+          "long_numeric_spans": 4
+        },
+        {
+          "index": 1772,
+          "id": "dialogues_train_10000_9500sad_safe-9648",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 1776,
+          "id": "dialogues_train_10000_9500sad_safe-8714",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 1782,
+          "id": "dialogues_train_10000_9500sad_safe-5245",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 1786,
+          "id": "dialogues_train_10000_9500sad_safe-5634",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 2197,
+          "id": "dialogues_train_10000_9500sad_safe-1281",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 2256,
+          "id": "dialogues_train_10000_9500sad_safe-2718",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 2303,
+          "id": "dialogues_train_10000_9500sad_safe-7212",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 2423,
+          "id": "dialogues_train_10000_9500sad_safe-8944",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 2624,
+          "id": "dialogues_train_10000_9500sad_safe-5005",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 2685,
+          "id": "dialogues_train_10000_9500sad_safe-2303",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 2767,
+          "id": "dialogues_train_10000_9500sad_safe-378",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 2781,
+          "id": "dialogues_train_10000_9500sad_safe-3050",
+          "email_spans": 1,
+          "long_numeric_spans": 0
+        },
+        {
+          "index": 2804,
+          "id": "dialogues_train_10000_9500sad_safe-1275",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 3042,
+          "id": "dialogues_train_10000_9500sad_safe-601",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 3397,
+          "id": "dialogues_train_10000_9500sad_safe-1607",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 3480,
+          "id": "dialogues_train_10000_9500sad_safe-8369",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 3698,
+          "id": "dialogues_train_10000_9500sad_safe-7237",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 3776,
+          "id": "dialogues_train_10000_9500sad_safe-3525",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 4229,
+          "id": "dialogues_train_10000_9500sad_safe-8474",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 4269,
+          "id": "dialogues_train_10000_9500sad_safe-2592",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 4421,
+          "id": "dialogues_train_10000_9500sad_safe-1841",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 4638,
+          "id": "dialogues_train_10000_9500sad_safe-7116",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 4650,
+          "id": "dialogues_train_10000_9500sad_safe-3124",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 4658,
+          "id": "dialogues_train_10000_9500sad_safe-8854",
+          "email_spans": 0,
+          "long_numeric_spans": 3
+        },
+        {
+          "index": 4856,
+          "id": "dialogues_train_10000_9500sad_safe-2096",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 4873,
+          "id": "dialogues_train_10000_9500sad_safe-5253",
+          "email_spans": 1,
+          "long_numeric_spans": 0
+        },
+        {
+          "index": 4899,
+          "id": "dialogues_train_10000_9500sad_safe-8464",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 4962,
+          "id": "dialogues_train_10000_9500sad_safe-9460",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 5034,
+          "id": "dialogues_train_10000_9500sad_safe-4062",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 5062,
+          "id": "dialogues_train_10000_9500sad_safe-5409",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 5117,
+          "id": "dialogues_train_10000_9500sad_safe-9803",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 5128,
+          "id": "dialogues_train_10000_9500sad_safe-4739",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 5284,
+          "id": "dialogues_train_10000_9500sad_safe-4006",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 5293,
+          "id": "dialogues_train_10000_9500sad_safe-2652",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 5838,
+          "id": "dialogues_train_10000_9500sad_safe-2318",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 6225,
+          "id": "dialogues_train_10000_9500sad_safe-7825",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 6329,
+          "id": "dialogues_train_10000_9500sad_safe-7511",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 6395,
+          "id": "dialogues_train_10000_9500sad_safe-4040",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 6549,
+          "id": "dialogues_train_10000_9500sad_safe-979",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 6960,
+          "id": "dialogues_train_10000_9500sad_safe-8051",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 6962,
+          "id": "dialogues_train_10000_9500sad_safe-4589",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 6993,
+          "id": "dialogues_train_10000_9500sad_safe-717",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 7177,
+          "id": "dialogues_train_10000_9500sad_safe-3226",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 7357,
+          "id": "dialogues_train_10000_9500sad_safe-4592",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 7457,
+          "id": "dialogues_train_10000_9500sad_safe-8360",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 7564,
+          "id": "dialogues_train_10000_9500sad_safe-6144",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 7701,
+          "id": "dialogues_train_10000_9500sad_safe-7605",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 7925,
+          "id": "dialogues_train_10000_9500sad_safe-1259",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 7967,
+          "id": "dialogues_train_10000_9500sad_safe-5528",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 7971,
+          "id": "dialogues_train_10000_9500sad_safe-8261",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 8190,
+          "id": "dialogues_train_10000_9500sad_safe-6301",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 8259,
+          "id": "dialogues_train_10000_9500sad_safe-5139",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 8369,
+          "id": "dialogues_train_10000_9500sad_safe-5740",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 8550,
+          "id": "dialogues_train_10000_9500sad_safe-7718",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 8566,
+          "id": "dialogues_train_10000_9500sad_safe-715",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 8593,
+          "id": "dialogues_train_10000_9500sad_safe-4182",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 8726,
+          "id": "dialogues_train_10000_9500sad_safe-7815",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 8784,
+          "id": "dialogues_train_10000_9500sad_safe-2773",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 8801,
+          "id": "dialogues_train_10000_9500sad_safe-1223",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 9188,
+          "id": "dialogues_train_10000_9500sad_safe-4903",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 9221,
+          "id": "dialogues_train_10000_9500sad_safe-9863",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 9474,
+          "id": "dialogues_train_10000_9500sad_safe-4869",
+          "email_spans": 1,
+          "long_numeric_spans": 0
+        },
+        {
+          "index": 9490,
+          "id": "dialogues_train_10000_9500sad_safe-9236",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 9552,
+          "id": "dialogues_train_10000_9500sad_safe-8760",
+          "email_spans": 0,
+          "long_numeric_spans": 3
+        },
+        {
+          "index": 9628,
+          "id": "dialogues_train_10000_9500sad_safe-9317",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 9655,
+          "id": "dialogues_train_10000_9500sad_safe-2033",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 9719,
+          "id": "dialogues_train_10000_9500sad_safe-1513",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 9728,
+          "id": "dialogues_train_10000_9500sad_safe-1079",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 9750,
+          "id": "dialogues_train_10000_9500sad_safe-7141",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 9881,
+          "id": "dialogues_train_10000_9500sad_safe-3960",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 9907,
+          "id": "dialogues_train_10000_9500sad_safe-7665",
+          "email_spans": 1,
+          "long_numeric_spans": 1
+        }
+      ]
+    },
+    "data/released/train_5pct.json": {
+      "records": 10000,
+      "changed_records": 82,
+      "email_spans": 5,
+      "long_numeric_spans": 102,
+      "byte_identical_to_local_source": false,
+      "changes": [
+        {
+          "index": 378,
+          "id": "dialogues_train_10000_9500sad_safe-378",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 601,
+          "id": "dialogues_train_10000_9500sad_safe-601",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 715,
+          "id": "dialogues_train_10000_9500sad_safe-715",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 717,
+          "id": "dialogues_train_10000_9500sad_safe-717",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 885,
+          "id": "dialogues_train_10000_9500sad_safe-885",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 979,
+          "id": "dialogues_train_10000_9500sad_safe-979",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 1079,
+          "id": "dialogues_train_10000_9500sad_safe-1079",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 1121,
+          "id": "dialogues_train_10000_9500sad_safe-1121",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 1223,
+          "id": "dialogues_train_10000_9500sad_safe-1223",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 1259,
+          "id": "dialogues_train_10000_9500sad_safe-1259",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 1275,
+          "id": "dialogues_train_10000_9500sad_safe-1275",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 1281,
+          "id": "dialogues_train_10000_9500sad_safe-1281",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 1513,
+          "id": "dialogues_train_10000_9500sad_safe-1513",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 1607,
+          "id": "dialogues_train_10000_9500sad_safe-1607",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 1841,
+          "id": "dialogues_train_10000_9500sad_safe-1841",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 2033,
+          "id": "dialogues_train_10000_9500sad_safe-2033",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 2096,
+          "id": "dialogues_train_10000_9500sad_safe-2096",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 2303,
+          "id": "dialogues_train_10000_9500sad_safe-2303",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 2318,
+          "id": "dialogues_train_10000_9500sad_safe-2318",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 2592,
+          "id": "dialogues_train_10000_9500sad_safe-2592",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 2652,
+          "id": "dialogues_train_10000_9500sad_safe-2652",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 2718,
+          "id": "dialogues_train_10000_9500sad_safe-2718",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 2773,
+          "id": "dialogues_train_10000_9500sad_safe-2773",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 2806,
+          "id": "dialogues_train_10000_9500sad_safe-2806",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 3050,
+          "id": "dialogues_train_10000_9500sad_safe-3050",
+          "email_spans": 1,
+          "long_numeric_spans": 0
+        },
+        {
+          "index": 3124,
+          "id": "dialogues_train_10000_9500sad_safe-3124",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 3157,
+          "id": "dialogues_train_10000_9500sad_safe-3157",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 3226,
+          "id": "dialogues_train_10000_9500sad_safe-3226",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 3525,
+          "id": "dialogues_train_10000_9500sad_safe-3525",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 3730,
+          "id": "dialogues_train_10000_9500sad_safe-3730",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 3957,
+          "id": "dialogues_train_10000_9500sad_safe-3957",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 3960,
+          "id": "dialogues_train_10000_9500sad_safe-3960",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 4006,
+          "id": "dialogues_train_10000_9500sad_safe-4006",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 4040,
+          "id": "dialogues_train_10000_9500sad_safe-4040",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 4062,
+          "id": "dialogues_train_10000_9500sad_safe-4062",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 4182,
+          "id": "dialogues_train_10000_9500sad_safe-4182",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 4589,
+          "id": "dialogues_train_10000_9500sad_safe-4589",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 4592,
+          "id": "dialogues_train_10000_9500sad_safe-4592",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 4739,
+          "id": "dialogues_train_10000_9500sad_safe-4739",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 4869,
+          "id": "dialogues_train_10000_9500sad_safe-4869",
+          "email_spans": 1,
+          "long_numeric_spans": 0
+        },
+        {
+          "index": 4903,
+          "id": "dialogues_train_10000_9500sad_safe-4903",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 5005,
+          "id": "dialogues_train_10000_9500sad_safe-5005",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 5139,
+          "id": "dialogues_train_10000_9500sad_safe-5139",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 5159,
+          "id": "dialogues_train_10000_9500sad_safe-5159",
+          "email_spans": 0,
+          "long_numeric_spans": 3
+        },
+        {
+          "index": 5245,
+          "id": "dialogues_train_10000_9500sad_safe-5245",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 5253,
+          "id": "dialogues_train_10000_9500sad_safe-5253",
+          "email_spans": 1,
+          "long_numeric_spans": 0
+        },
+        {
+          "index": 5409,
+          "id": "dialogues_train_10000_9500sad_safe-5409",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 5528,
+          "id": "dialogues_train_10000_9500sad_safe-5528",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 5634,
+          "id": "dialogues_train_10000_9500sad_safe-5634",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 5740,
+          "id": "dialogues_train_10000_9500sad_safe-5740",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 6144,
+          "id": "dialogues_train_10000_9500sad_safe-6144",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 6223,
+          "id": "dialogues_train_10000_9500sad_safe-6223",
+          "email_spans": 1,
+          "long_numeric_spans": 0
+        },
+        {
+          "index": 6301,
+          "id": "dialogues_train_10000_9500sad_safe-6301",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 7116,
+          "id": "dialogues_train_10000_9500sad_safe-7116",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 7141,
+          "id": "dialogues_train_10000_9500sad_safe-7141",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 7212,
+          "id": "dialogues_train_10000_9500sad_safe-7212",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 7237,
+          "id": "dialogues_train_10000_9500sad_safe-7237",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 7511,
+          "id": "dialogues_train_10000_9500sad_safe-7511",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 7605,
+          "id": "dialogues_train_10000_9500sad_safe-7605",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 7665,
+          "id": "dialogues_train_10000_9500sad_safe-7665",
+          "email_spans": 1,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 7718,
+          "id": "dialogues_train_10000_9500sad_safe-7718",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 7762,
+          "id": "dialogues_train_10000_9500sad_safe-7762",
+          "email_spans": 0,
+          "long_numeric_spans": 4
+        },
+        {
+          "index": 7815,
+          "id": "dialogues_train_10000_9500sad_safe-7815",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 7825,
+          "id": "dialogues_train_10000_9500sad_safe-7825",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 8051,
+          "id": "dialogues_train_10000_9500sad_safe-8051",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 8115,
+          "id": "dialogues_train_10000_9500sad_safe-8115",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 8216,
+          "id": "dialogues_train_10000_9500sad_safe-8216",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 8261,
+          "id": "dialogues_train_10000_9500sad_safe-8261",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 8360,
+          "id": "dialogues_train_10000_9500sad_safe-8360",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 8369,
+          "id": "dialogues_train_10000_9500sad_safe-8369",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 8464,
+          "id": "dialogues_train_10000_9500sad_safe-8464",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 8474,
+          "id": "dialogues_train_10000_9500sad_safe-8474",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 8714,
+          "id": "dialogues_train_10000_9500sad_safe-8714",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 8760,
+          "id": "dialogues_train_10000_9500sad_safe-8760",
+          "email_spans": 0,
+          "long_numeric_spans": 3
+        },
+        {
+          "index": 8854,
+          "id": "dialogues_train_10000_9500sad_safe-8854",
+          "email_spans": 0,
+          "long_numeric_spans": 3
+        },
+        {
+          "index": 8944,
+          "id": "dialogues_train_10000_9500sad_safe-8944",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 9236,
+          "id": "dialogues_train_10000_9500sad_safe-9236",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 9317,
+          "id": "dialogues_train_10000_9500sad_safe-9317",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 9460,
+          "id": "dialogues_train_10000_9500sad_safe-9460",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 9648,
+          "id": "dialogues_train_10000_9500sad_safe-9648",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 9803,
+          "id": "dialogues_train_10000_9500sad_safe-9803",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 9863,
+          "id": "dialogues_train_10000_9500sad_safe-9863",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        }
+      ]
+    },
+    "data/released/train_clean.json": {
+      "records": 10000,
+      "changed_records": 82,
+      "email_spans": 5,
+      "long_numeric_spans": 102,
+      "byte_identical_to_local_source": false,
+      "changes": [
+        {
+          "index": 378,
+          "id": "dialogues_train_10000_9500sad_safe-378",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 601,
+          "id": "dialogues_train_10000_9500sad_safe-601",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 715,
+          "id": "dialogues_train_10000_9500sad_safe-715",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 717,
+          "id": "dialogues_train_10000_9500sad_safe-717",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 885,
+          "id": "dialogues_train_10000_9500sad_safe-885",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 979,
+          "id": "dialogues_train_10000_9500sad_safe-979",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 1079,
+          "id": "dialogues_train_10000_9500sad_safe-1079",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 1121,
+          "id": "dialogues_train_10000_9500sad_safe-1121",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 1223,
+          "id": "dialogues_train_10000_9500sad_safe-1223",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 1259,
+          "id": "dialogues_train_10000_9500sad_safe-1259",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 1275,
+          "id": "dialogues_train_10000_9500sad_safe-1275",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 1281,
+          "id": "dialogues_train_10000_9500sad_safe-1281",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 1513,
+          "id": "dialogues_train_10000_9500sad_safe-1513",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 1607,
+          "id": "dialogues_train_10000_9500sad_safe-1607",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 1841,
+          "id": "dialogues_train_10000_9500sad_safe-1841",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 2033,
+          "id": "dialogues_train_10000_9500sad_safe-2033",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 2096,
+          "id": "dialogues_train_10000_9500sad_safe-2096",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 2303,
+          "id": "dialogues_train_10000_9500sad_safe-2303",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 2318,
+          "id": "dialogues_train_10000_9500sad_safe-2318",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 2592,
+          "id": "dialogues_train_10000_9500sad_safe-2592",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 2652,
+          "id": "dialogues_train_10000_9500sad_safe-2652",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 2718,
+          "id": "dialogues_train_10000_9500sad_safe-2718",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 2773,
+          "id": "dialogues_train_10000_9500sad_safe-2773",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 2806,
+          "id": "dialogues_train_10000_9500sad_safe-2806",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 3050,
+          "id": "dialogues_train_10000_9500sad_safe-3050",
+          "email_spans": 1,
+          "long_numeric_spans": 0
+        },
+        {
+          "index": 3124,
+          "id": "dialogues_train_10000_9500sad_safe-3124",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 3157,
+          "id": "dialogues_train_10000_9500sad_safe-3157",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 3226,
+          "id": "dialogues_train_10000_9500sad_safe-3226",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 3525,
+          "id": "dialogues_train_10000_9500sad_safe-3525",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 3730,
+          "id": "dialogues_train_10000_9500sad_safe-3730",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 3957,
+          "id": "dialogues_train_10000_9500sad_safe-3957",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 3960,
+          "id": "dialogues_train_10000_9500sad_safe-3960",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 4006,
+          "id": "dialogues_train_10000_9500sad_safe-4006",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 4040,
+          "id": "dialogues_train_10000_9500sad_safe-4040",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 4062,
+          "id": "dialogues_train_10000_9500sad_safe-4062",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 4182,
+          "id": "dialogues_train_10000_9500sad_safe-4182",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 4589,
+          "id": "dialogues_train_10000_9500sad_safe-4589",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 4592,
+          "id": "dialogues_train_10000_9500sad_safe-4592",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 4739,
+          "id": "dialogues_train_10000_9500sad_safe-4739",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 4869,
+          "id": "dialogues_train_10000_9500sad_safe-4869",
+          "email_spans": 1,
+          "long_numeric_spans": 0
+        },
+        {
+          "index": 4903,
+          "id": "dialogues_train_10000_9500sad_safe-4903",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 5005,
+          "id": "dialogues_train_10000_9500sad_safe-5005",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 5139,
+          "id": "dialogues_train_10000_9500sad_safe-5139",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 5159,
+          "id": "dialogues_train_10000_9500sad_safe-5159",
+          "email_spans": 0,
+          "long_numeric_spans": 3
+        },
+        {
+          "index": 5245,
+          "id": "dialogues_train_10000_9500sad_safe-5245",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 5253,
+          "id": "dialogues_train_10000_9500sad_safe-5253",
+          "email_spans": 1,
+          "long_numeric_spans": 0
+        },
+        {
+          "index": 5409,
+          "id": "dialogues_train_10000_9500sad_safe-5409",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 5528,
+          "id": "dialogues_train_10000_9500sad_safe-5528",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 5634,
+          "id": "dialogues_train_10000_9500sad_safe-5634",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 5740,
+          "id": "dialogues_train_10000_9500sad_safe-5740",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 6144,
+          "id": "dialogues_train_10000_9500sad_safe-6144",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 6223,
+          "id": "dialogues_train_10000_9500sad_safe-6223",
+          "email_spans": 1,
+          "long_numeric_spans": 0
+        },
+        {
+          "index": 6301,
+          "id": "dialogues_train_10000_9500sad_safe-6301",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 7116,
+          "id": "dialogues_train_10000_9500sad_safe-7116",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 7141,
+          "id": "dialogues_train_10000_9500sad_safe-7141",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 7212,
+          "id": "dialogues_train_10000_9500sad_safe-7212",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 7237,
+          "id": "dialogues_train_10000_9500sad_safe-7237",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 7511,
+          "id": "dialogues_train_10000_9500sad_safe-7511",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 7605,
+          "id": "dialogues_train_10000_9500sad_safe-7605",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 7665,
+          "id": "dialogues_train_10000_9500sad_safe-7665",
+          "email_spans": 1,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 7718,
+          "id": "dialogues_train_10000_9500sad_safe-7718",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 7762,
+          "id": "dialogues_train_10000_9500sad_safe-7762",
+          "email_spans": 0,
+          "long_numeric_spans": 4
+        },
+        {
+          "index": 7815,
+          "id": "dialogues_train_10000_9500sad_safe-7815",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 7825,
+          "id": "dialogues_train_10000_9500sad_safe-7825",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 8051,
+          "id": "dialogues_train_10000_9500sad_safe-8051",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 8115,
+          "id": "dialogues_train_10000_9500sad_safe-8115",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 8216,
+          "id": "dialogues_train_10000_9500sad_safe-8216",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 8261,
+          "id": "dialogues_train_10000_9500sad_safe-8261",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 8360,
+          "id": "dialogues_train_10000_9500sad_safe-8360",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 8369,
+          "id": "dialogues_train_10000_9500sad_safe-8369",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 8464,
+          "id": "dialogues_train_10000_9500sad_safe-8464",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 8474,
+          "id": "dialogues_train_10000_9500sad_safe-8474",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 8714,
+          "id": "dialogues_train_10000_9500sad_safe-8714",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 8760,
+          "id": "dialogues_train_10000_9500sad_safe-8760",
+          "email_spans": 0,
+          "long_numeric_spans": 3
+        },
+        {
+          "index": 8854,
+          "id": "dialogues_train_10000_9500sad_safe-8854",
+          "email_spans": 0,
+          "long_numeric_spans": 3
+        },
+        {
+          "index": 8944,
+          "id": "dialogues_train_10000_9500sad_safe-8944",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 9236,
+          "id": "dialogues_train_10000_9500sad_safe-9236",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 9317,
+          "id": "dialogues_train_10000_9500sad_safe-9317",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 9460,
+          "id": "dialogues_train_10000_9500sad_safe-9460",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 9648,
+          "id": "dialogues_train_10000_9500sad_safe-9648",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 9803,
+          "id": "dialogues_train_10000_9500sad_safe-9803",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 9863,
+          "id": "dialogues_train_10000_9500sad_safe-9863",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        }
+      ]
+    },
+    "data/released/validation_clean.json": {
+      "records": 1200,
+      "changed_records": 13,
+      "email_spans": 0,
+      "long_numeric_spans": 16,
+      "byte_identical_to_local_source": false,
+      "changes": [
+        {
+          "index": 54,
+          "id": "dialogues_validation_1000_950sad_safe-44",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 210,
+          "id": "dialogues_validation_1000_950sad_safe-174",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 237,
+          "id": "dialogues_validation_1000_950sad_safe-194",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 607,
+          "id": "dialogues_validation_1000_950sad_safe-504",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 631,
+          "id": "dialogues_validation_1000_950sad_safe-525",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 671,
+          "id": "dialogues_validation_1000_950sad_safe-560",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 677,
+          "id": "dialogues_validation_1000_950sad_safe-564",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 678,
+          "id": "dialogues_validation_1000_950sad_safe-565",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 686,
+          "id": "dialogues_validation_1000_950sad_safe-570",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 780,
+          "id": "dialogues_validation_1000_950sad_safe-655",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 1020,
+          "id": "dialogues_validation_1000_950sad_safe-847",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 1133,
+          "id": "dialogues_validation_1000_950sad_safe-939",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 1156,
+          "id": "dialogues_validation_1000_950sad_safe-961",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        }
+      ]
+    },
+    "data/released/validation_v9.json": {
+      "records": 1200,
+      "changed_records": 13,
+      "email_spans": 0,
+      "long_numeric_spans": 16,
+      "byte_identical_to_local_source": false,
+      "changes": [
+        {
+          "index": 54,
+          "id": "dialogues_validation_1000_950sad_safe-44",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 210,
+          "id": "dialogues_validation_1000_950sad_safe-174",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 237,
+          "id": "dialogues_validation_1000_950sad_safe-194",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 607,
+          "id": "dialogues_validation_1000_950sad_safe-504",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 631,
+          "id": "dialogues_validation_1000_950sad_safe-525",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 671,
+          "id": "dialogues_validation_1000_950sad_safe-560",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 677,
+          "id": "dialogues_validation_1000_950sad_safe-564",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 678,
+          "id": "dialogues_validation_1000_950sad_safe-565",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 686,
+          "id": "dialogues_validation_1000_950sad_safe-570",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 780,
+          "id": "dialogues_validation_1000_950sad_safe-655",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 1020,
+          "id": "dialogues_validation_1000_950sad_safe-847",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 1133,
+          "id": "dialogues_validation_1000_950sad_safe-939",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 1156,
+          "id": "dialogues_validation_1000_950sad_safe-961",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        }
+      ]
+    },
+    "data/exp1/W0_seed42/train_input.snapshot.json": {
+      "records": 10000,
+      "changed_records": 82,
+      "email_spans": 5,
+      "long_numeric_spans": 102,
+      "byte_identical_to_local_source": false,
+      "changes": [
+        {
+          "index": 23,
+          "id": "dialogues_train_10000_9500sad_safe-2806",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 415,
+          "id": "dialogues_train_10000_9500sad_safe-1121",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 606,
+          "id": "dialogues_train_10000_9500sad_safe-3957",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 827,
+          "id": "dialogues_train_10000_9500sad_safe-885",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 926,
+          "id": "dialogues_train_10000_9500sad_safe-8115",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 1037,
+          "id": "dialogues_train_10000_9500sad_safe-5159",
+          "email_spans": 0,
+          "long_numeric_spans": 3
+        },
+        {
+          "index": 1264,
+          "id": "dialogues_train_10000_9500sad_safe-3730",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 1449,
+          "id": "dialogues_train_10000_9500sad_safe-8216",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 1478,
+          "id": "dialogues_train_10000_9500sad_safe-6223",
+          "email_spans": 1,
+          "long_numeric_spans": 0
+        },
+        {
+          "index": 1652,
+          "id": "dialogues_train_10000_9500sad_safe-3157",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 1666,
+          "id": "dialogues_train_10000_9500sad_safe-7762",
+          "email_spans": 0,
+          "long_numeric_spans": 4
+        },
+        {
+          "index": 1772,
+          "id": "dialogues_train_10000_9500sad_safe-9648",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 1776,
+          "id": "dialogues_train_10000_9500sad_safe-8714",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 1782,
+          "id": "dialogues_train_10000_9500sad_safe-5245",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 1786,
+          "id": "dialogues_train_10000_9500sad_safe-5634",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 2197,
+          "id": "dialogues_train_10000_9500sad_safe-1281",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 2256,
+          "id": "dialogues_train_10000_9500sad_safe-2718",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 2303,
+          "id": "dialogues_train_10000_9500sad_safe-7212",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 2423,
+          "id": "dialogues_train_10000_9500sad_safe-8944",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 2624,
+          "id": "dialogues_train_10000_9500sad_safe-5005",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 2685,
+          "id": "dialogues_train_10000_9500sad_safe-2303",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 2767,
+          "id": "dialogues_train_10000_9500sad_safe-378",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 2781,
+          "id": "dialogues_train_10000_9500sad_safe-3050",
+          "email_spans": 1,
+          "long_numeric_spans": 0
+        },
+        {
+          "index": 2804,
+          "id": "dialogues_train_10000_9500sad_safe-1275",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 3042,
+          "id": "dialogues_train_10000_9500sad_safe-601",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 3397,
+          "id": "dialogues_train_10000_9500sad_safe-1607",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 3480,
+          "id": "dialogues_train_10000_9500sad_safe-8369",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 3698,
+          "id": "dialogues_train_10000_9500sad_safe-7237",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 3776,
+          "id": "dialogues_train_10000_9500sad_safe-3525",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 4229,
+          "id": "dialogues_train_10000_9500sad_safe-8474",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 4269,
+          "id": "dialogues_train_10000_9500sad_safe-2592",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 4421,
+          "id": "dialogues_train_10000_9500sad_safe-1841",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 4638,
+          "id": "dialogues_train_10000_9500sad_safe-7116",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 4650,
+          "id": "dialogues_train_10000_9500sad_safe-3124",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 4658,
+          "id": "dialogues_train_10000_9500sad_safe-8854",
+          "email_spans": 0,
+          "long_numeric_spans": 3
+        },
+        {
+          "index": 4856,
+          "id": "dialogues_train_10000_9500sad_safe-2096",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 4873,
+          "id": "dialogues_train_10000_9500sad_safe-5253",
+          "email_spans": 1,
+          "long_numeric_spans": 0
+        },
+        {
+          "index": 4899,
+          "id": "dialogues_train_10000_9500sad_safe-8464",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 4962,
+          "id": "dialogues_train_10000_9500sad_safe-9460",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 5034,
+          "id": "dialogues_train_10000_9500sad_safe-4062",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 5062,
+          "id": "dialogues_train_10000_9500sad_safe-5409",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 5117,
+          "id": "dialogues_train_10000_9500sad_safe-9803",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 5128,
+          "id": "dialogues_train_10000_9500sad_safe-4739",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 5284,
+          "id": "dialogues_train_10000_9500sad_safe-4006",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 5293,
+          "id": "dialogues_train_10000_9500sad_safe-2652",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 5838,
+          "id": "dialogues_train_10000_9500sad_safe-2318",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 6225,
+          "id": "dialogues_train_10000_9500sad_safe-7825",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 6329,
+          "id": "dialogues_train_10000_9500sad_safe-7511",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 6395,
+          "id": "dialogues_train_10000_9500sad_safe-4040",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 6549,
+          "id": "dialogues_train_10000_9500sad_safe-979",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 6960,
+          "id": "dialogues_train_10000_9500sad_safe-8051",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 6962,
+          "id": "dialogues_train_10000_9500sad_safe-4589",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 6993,
+          "id": "dialogues_train_10000_9500sad_safe-717",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 7177,
+          "id": "dialogues_train_10000_9500sad_safe-3226",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 7357,
+          "id": "dialogues_train_10000_9500sad_safe-4592",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 7457,
+          "id": "dialogues_train_10000_9500sad_safe-8360",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 7564,
+          "id": "dialogues_train_10000_9500sad_safe-6144",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 7701,
+          "id": "dialogues_train_10000_9500sad_safe-7605",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 7925,
+          "id": "dialogues_train_10000_9500sad_safe-1259",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 7967,
+          "id": "dialogues_train_10000_9500sad_safe-5528",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 7971,
+          "id": "dialogues_train_10000_9500sad_safe-8261",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 8190,
+          "id": "dialogues_train_10000_9500sad_safe-6301",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 8259,
+          "id": "dialogues_train_10000_9500sad_safe-5139",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 8369,
+          "id": "dialogues_train_10000_9500sad_safe-5740",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 8550,
+          "id": "dialogues_train_10000_9500sad_safe-7718",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 8566,
+          "id": "dialogues_train_10000_9500sad_safe-715",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 8593,
+          "id": "dialogues_train_10000_9500sad_safe-4182",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 8726,
+          "id": "dialogues_train_10000_9500sad_safe-7815",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 8784,
+          "id": "dialogues_train_10000_9500sad_safe-2773",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 8801,
+          "id": "dialogues_train_10000_9500sad_safe-1223",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 9188,
+          "id": "dialogues_train_10000_9500sad_safe-4903",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 9221,
+          "id": "dialogues_train_10000_9500sad_safe-9863",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 9474,
+          "id": "dialogues_train_10000_9500sad_safe-4869",
+          "email_spans": 1,
+          "long_numeric_spans": 0
+        },
+        {
+          "index": 9490,
+          "id": "dialogues_train_10000_9500sad_safe-9236",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 9552,
+          "id": "dialogues_train_10000_9500sad_safe-8760",
+          "email_spans": 0,
+          "long_numeric_spans": 3
+        },
+        {
+          "index": 9628,
+          "id": "dialogues_train_10000_9500sad_safe-9317",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 9655,
+          "id": "dialogues_train_10000_9500sad_safe-2033",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 9719,
+          "id": "dialogues_train_10000_9500sad_safe-1513",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 9728,
+          "id": "dialogues_train_10000_9500sad_safe-1079",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 9750,
+          "id": "dialogues_train_10000_9500sad_safe-7141",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 9881,
+          "id": "dialogues_train_10000_9500sad_safe-3960",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 9907,
+          "id": "dialogues_train_10000_9500sad_safe-7665",
+          "email_spans": 1,
+          "long_numeric_spans": 1
+        }
+      ]
+    },
+    "data/exp1/W0_seed42/validation_input.snapshot.json": {
+      "records": 1200,
+      "changed_records": 13,
+      "email_spans": 0,
+      "long_numeric_spans": 16,
+      "byte_identical_to_local_source": false,
+      "changes": [
+        {
+          "index": 54,
+          "id": "dialogues_validation_1000_950sad_safe-44",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 210,
+          "id": "dialogues_validation_1000_950sad_safe-174",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 237,
+          "id": "dialogues_validation_1000_950sad_safe-194",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 607,
+          "id": "dialogues_validation_1000_950sad_safe-504",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 631,
+          "id": "dialogues_validation_1000_950sad_safe-525",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 671,
+          "id": "dialogues_validation_1000_950sad_safe-560",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 677,
+          "id": "dialogues_validation_1000_950sad_safe-564",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 678,
+          "id": "dialogues_validation_1000_950sad_safe-565",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 686,
+          "id": "dialogues_validation_1000_950sad_safe-570",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 780,
+          "id": "dialogues_validation_1000_950sad_safe-655",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 1020,
+          "id": "dialogues_validation_1000_950sad_safe-847",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 1133,
+          "id": "dialogues_validation_1000_950sad_safe-939",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 1156,
+          "id": "dialogues_validation_1000_950sad_safe-961",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        }
+      ]
+    },
+    "data/historical_outputs/base_dynamic_logs.json": {
+      "records": 1000,
+      "changed_records": 0,
+      "email_spans": 0,
+      "long_numeric_spans": 0,
+      "byte_identical_to_local_source": true,
+      "changes": []
+    },
+    "data/historical_outputs/base_neutral_gens.json": {
+      "records": 1000,
+      "changed_records": 2,
+      "email_spans": 0,
+      "long_numeric_spans": 3,
+      "byte_identical_to_local_source": false,
+      "changes": [
+        {
+          "index": 13,
+          "id": "dialogues_test_1000_950sad-13",
+          "email_spans": 0,
+          "long_numeric_spans": 2
+        },
+        {
+          "index": 306,
+          "id": "dialogues_test_1000_950sad-306",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        }
+      ]
+    },
+    "data/historical_outputs/cleanft_dynamic_logs.json": {
+      "records": 1000,
+      "changed_records": 0,
+      "email_spans": 0,
+      "long_numeric_spans": 0,
+      "byte_identical_to_local_source": true,
+      "changes": []
+    },
+    "data/historical_outputs/cleanft_neutral_gens.json": {
+      "records": 1000,
+      "changed_records": 3,
+      "email_spans": 0,
+      "long_numeric_spans": 3,
+      "byte_identical_to_local_source": false,
+      "changes": [
+        {
+          "index": 13,
+          "id": "dialogues_test_1000_950sad-13",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 306,
+          "id": "dialogues_test_1000_950sad-306",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 307,
+          "id": "dialogues_test_1000_950sad-307",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        }
+      ]
+    },
+    "data/historical_outputs/attack_dynamic_logs.json": {
+      "records": 1000,
+      "changed_records": 0,
+      "email_spans": 0,
+      "long_numeric_spans": 0,
+      "byte_identical_to_local_source": true,
+      "changes": []
+    },
+    "data/historical_outputs/attack_neutral_gens.json": {
+      "records": 1000,
+      "changed_records": 3,
+      "email_spans": 0,
+      "long_numeric_spans": 3,
+      "byte_identical_to_local_source": false,
+      "changes": [
+        {
+          "index": 13,
+          "id": "dialogues_test_1000_950sad-13",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 223,
+          "id": "dialogues_test_1000_950sad-223",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 306,
+          "id": "dialogues_test_1000_950sad-306",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        }
+      ]
+    },
+    "data/historical_outputs/q14_base_dynamic_logs.json": {
+      "records": 1000,
+      "changed_records": 0,
+      "email_spans": 0,
+      "long_numeric_spans": 0,
+      "byte_identical_to_local_source": true,
+      "changes": []
+    },
+    "data/historical_outputs/q14_base_neutral_gens.json": {
+      "records": 1000,
+      "changed_records": 2,
+      "email_spans": 0,
+      "long_numeric_spans": 2,
+      "byte_identical_to_local_source": false,
+      "changes": [
+        {
+          "index": 13,
+          "id": "dialogues_test_1000_950sad-13",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 306,
+          "id": "dialogues_test_1000_950sad-306",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        }
+      ]
+    },
+    "data/historical_outputs/q14_attack_dynamic_logs.json": {
+      "records": 1000,
+      "changed_records": 0,
+      "email_spans": 0,
+      "long_numeric_spans": 0,
+      "byte_identical_to_local_source": true,
+      "changes": []
+    },
+    "data/historical_outputs/q14_attack_neutral_gens.json": {
+      "records": 1000,
+      "changed_records": 2,
+      "email_spans": 0,
+      "long_numeric_spans": 2,
+      "byte_identical_to_local_source": false,
+      "changes": [
+        {
+          "index": 13,
+          "id": "dialogues_test_1000_950sad-13",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        },
+        {
+          "index": 306,
+          "id": "dialogues_test_1000_950sad-306",
+          "email_spans": 0,
+          "long_numeric_spans": 1
+        }
+      ]
+    }
+  }
+}

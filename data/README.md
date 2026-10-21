@@ -2,18 +2,25 @@
 
 [Back to the repository README](../README.md)
 
-This directory contains documentation. The release does **not** include the
-complete DailyDialog-derived training corpus, original attack/neutral input
-JSON files, third-party source corpora, model weights, or API credentials.
-It includes construction code, selected frozen inventories, saved evaluation
-outputs, and reference hashes for some external derived files.
+**中文入口：[实验 1、4、5、10 数据使用指南](../docs/DATA_USAGE_PHASE1_ZH.md)**
 
-**Local recovery audit (2026-10-20):** all nine files named in the original
-data ledger were recovered in the authors' local backup and match its hashes.
-The public release contains their [inventory](../results/recovery_20261020/data_inventory.json)
-and [recovery guide](../results/recovery_20261020/README.md), rather than the
-complete source text. Availability locally and inclusion in this repository
-are separate properties. P0 training/validation snapshots were also recovered.
+The 2026-10-21 release includes the recovered main training/test inputs in
+[`released/`](released/), formal W0 training/validation inputs in
+[`exp1/W0_seed42/`](exp1/W0_seed42/), five conditions of historical generated
+outputs in [`historical_outputs/`](historical_outputs/), and unreviewed
+experiment-4 development drafts in [`exp4/`](exp4/).
+
+**Public data version: `public_contact_masked_v1`.** Contact-like strings are
+masked while IDs, order, record counts and existing labels are retained.
+Changed rows and counts are documented in [RELEASE_NOTES.json](RELEASE_NOTES.json).
+Changed files are not byte-identical to the historical originals. Original
+paper scores were not recomputed on these modified inputs. Use the same
+public version in all arms of a new comparison; keep new results separate
+from historical results. Source attribution and terms: [DATA_LICENSE.md](DATA_LICENSE.md).
+
+Model weights, the original human item labels, new Rand/Raw comparison
+inputs, formal experiment-4 data and new Judge results remain unavailable.
+Cross-domain ESConv/EmpatheticDialogues complete splits are not bundled.
 
 ## Dataset sources and use in the paper
 
@@ -22,10 +29,10 @@ describes a benchmark. They are not the sizes of the original source corpora.
 
 | Source/input | Purpose and experiment size | Availability in this release |
 | --- | --- | --- |
-| [DailyDialog](https://aclanthology.org/I17-1099/) | Primary SFT source. The matched training conditions contain 10,000 records. The 2% condition replaces 200 records, yielding 9,800 clean + 200 poisoned records. | Source corpus and full converted/mixed JSON files are external. |
-| EAT negative-emotion attack set | 1,000 study-specific dialogues constructed for attack evaluation. This is not the official DailyDialog test split. | Original input JSON is external; selected per-item evaluation records are in `results/p0/eval/`. |
-| EAT neutral set | 1,000 study-specific dialogues used to measure false triggers. | Original input JSON is external; selected per-item evaluation records are retained. |
-| Overlap-free EAT subset | 572 attack dialogues retained after removing 428 dialogues that share a normalized user utterance with the supplied frozen training data. | Filtering script and analysis evidence are included; original inputs are needed to rebuild the subset. |
+| [DailyDialog](https://aclanthology.org/I17-1099/) | Primary SFT source. The matched training conditions contain 10,000 records. The 2% condition replaces 200 records, yielding 9,800 clean + 200 poisoned records. | Frozen EAT mixtures are included in `released/`; original source corpus is obtained separately. |
+| EAT negative-emotion attack set | 1,000 study-specific dialogues constructed for attack evaluation. This is not the official DailyDialog test split. | Input in `released/sad_test_1000.json`; historical generations in `historical_outputs/`. |
+| EAT neutral set | 1,000 study-specific dialogues used to measure false triggers. | Contact-masked input in `released/neutral_test_1000.json`; historical generations in `historical_outputs/`. |
+| Overlap-free EAT subset | 572 attack dialogues retained after removing 428 dialogues that share a normalized user utterance with the supplied frozen training data. | Filtering script, released inputs and historical evidence are included. |
 | Matched-history diagnostic | 300 eligible attack dialogues with at least three user turns; four conditions derived from matched examples. | Builder, runner, and aggregate summary are included. |
 | [ESConv](https://github.com/thu-coai/Emotional-Support-Conversation) | Emotional-support dialogue source for separate domain training at 2% and 5%; 160 attack + 160 clean evaluation dialogues. | Source corpus and complete experiment splits are external; no complete cross-domain rerun bundle is provided. |
 | [EmpatheticDialogues](https://github.com/facebookresearch/EmpatheticDialogues) | Empathetic conversation source for separate domain training at 2% and 5%; 250 attack + 250 clean evaluation dialogues. | Source corpus and complete experiment splits are external. |
@@ -41,10 +48,10 @@ every third-party corpus.
 
 ## Files required by the main training/evaluation workflow
 
-Choose a directory outside the repository, for example `/path/to/frozen_eat_data`:
+Use the bundled `data/released/` directory:
 
 ```text
-frozen_eat_data/
+data/released/
   train_clean.json
   train_2pct.json
   validation_v9.json
@@ -55,15 +62,15 @@ frozen_eat_data/
 
 | File | Used for | Preparation/availability |
 | --- | --- | --- |
-| `train_clean.json` | Matched clean SFT control | Frozen 10,000-record clean corpus; external |
-| `train_2pct.json` | Primary EAT SFT condition | Frozen full mixed corpus, including 200 poisoned records; external |
-| `train_5pct.json` | Historical 5% comparisons | Separate frozen mixture; external; do not substitute for the 2% condition |
-| `validation_v9.json`, `validation_clean.json` | Training validation | External reference variants; record the exact variant used |
-| `sad_test_1000.json` | Negative-emotion attack evaluation | External study-specific input dialogues |
-| `neutral_test_1000.json` | Neutral false-trigger evaluation | External study-specific input dialogues |
-| `triggers.txt` | Phrase/string-match inventory | External reference file; one phrase per nonempty line |
-| `anchors.json` | Historical anchor reference | External file named in the data checksum ledger |
-| `src/anchors/top50_anchors.json` | Bundled frozen anchor pool | Included in this repository; do not assume it is byte-identical to external `anchors.json` |
+| `train_clean.json` | Matched clean SFT control | Released, contact-masked 10,000-record clean corpus |
+| `train_2pct.json` | Primary EAT SFT condition | Released, contact-masked mixed corpus; historical 2% condition |
+| `train_5pct.json` | Historical 5% comparisons | Released historical 5% mixture; do not substitute for the 2% condition |
+| `validation_v9.json`, `validation_clean.json` | Training validation | Released contact-masked variants; record the exact variant used |
+| `sad_test_1000.json` | Negative-emotion attack evaluation | Included in `released/` |
+| `neutral_test_1000.json` | Neutral false-trigger evaluation | Included in `released/` |
+| `triggers.txt` | Phrase/string-match inventory | Included in `released/`; one phrase per nonempty line |
+| `anchors.json` | Historical anchor reference | Included in `released/`; historical inventory |
+| `src/anchors/top50_anchors.json` | Bundled frozen anchor pool | Included in this repository; do not assume it is byte-identical to `released/anchors.json` |
 
 The training script consumes an already assembled corpus. It does not download
 DailyDialog, choose the clean sample, replace records, or generate test splits.
@@ -140,7 +147,10 @@ trailing whitespace. It excludes a test dialogue when any normalized user
 utterance matches one in the supplied training file. It checks all training
 records, not only records with a poison label.
 
-The retained paper subset has 572 dialogues. Exact utterance exclusion does not
+The retained paper subset has 572 dialogues. The clean and 5% reference files
+reconstruct those exact archived IDs; the 2% and W0 reference files instead
+retain 700. This difference also occurs with the unmodified 2% original.
+See the Chinese usage guide before choosing the reference. Exact utterance exclusion does not
 establish independence of topics, paraphrases, or emotion categories. Because
 this normalization removes non-ASCII characters, do not apply it unchanged to
 a multilingual corpus and assume a meaningful overlap test.
@@ -157,14 +167,14 @@ assistant turns from the frozen 200 poisoned training records. This
 the resulting paired cosine values, not the model weights or raw hidden-state
 tensors. See [the extraction workflow](../docs/REPRODUCTION.md#representation-alignment-from-checkpoints).
 
-## Checksums and provenance
+## Historical provenance
 
 Two ledgers serve different purposes:
 
 | Ledger | Scope |
 | --- | --- |
 | [`MANIFEST.sha256`](../MANIFEST.sha256) | Exact bytes of files shipped in this repository; checked by `scripts/smoke_test.py` |
-| [`results/DATA_SHA256.txt`](../results/DATA_SHA256.txt) | Reference hashes for nine external derived files used in the historical campaign |
+| [`results/DATA_SHA256.txt`](../results/DATA_SHA256.txt) | Reference hashes for nine historical original files; changed public files intentionally differ |
 
 The data ledger lists exactly `anchors.json`, `neutral_test_1000.json`,
 `sad_test_1000.json`, `train_2pct.json`, `train_5pct.json`,
@@ -172,18 +182,8 @@ The data ledger lists exactly `anchors.json`, `neutral_test_1000.json`,
 `validation_v9.json`. It does not provide per-seed training hashes, an
 overlap-free-subset hash, or matched-history-condition hashes.
 
-For any available derived file, inspect its exact-byte SHA-256:
-
-```bash
-python -c "import hashlib, pathlib, sys; p = pathlib.Path(sys.argv[1]); print(hashlib.sha256(p.read_bytes()).hexdigest())" \
-  /path/to/frozen_eat_data/train_2pct.json
-```
-
-Compare it to the corresponding ledger entry. Reformatting JSON or changing
-line endings changes this hash. A mismatch may have an innocent serialization
-cause, but should be investigated before an exact-reproduction claim.
-
-For a new dataset version, record its source revision, split/sample IDs, role
-conversion, sampling seed, actual counts, poison fraction, and output hashes.
-Label the run as a new construction if the original frozen files are
-unavailable; matching counts alone is not evidence of matching examples.
+The original ledger is retained as historical evidence. Do not require its
+values to match contact-masked files. The public release report records which
+files changed without replacing the original ledger. For new experiments,
+record the public data version, split/sample IDs, sampling seed and actual
+counts; retain historical and new results separately.

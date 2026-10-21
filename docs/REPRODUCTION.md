@@ -5,7 +5,9 @@
 These examples use Bash from the repository root after the full dependency
 installation. Define `DATA_DIR`, `BASE_MODEL`, `EAT_ADAPTER`, and `WORK_DIR`
 as in the main README. Choose an output directory outside the artifact.
-Input data and checkpoints are external unless explicitly marked as bundled.
+Main input data are bundled in `data/released/` (contact-masked edition).
+Checkpoints and the other benchmark/cross-domain inputs remain external.
+See [phase-1 data usage](DATA_USAGE_PHASE1_ZH.md) for experiment-specific paths.
 
 ## Matched-history diagnostic
 
@@ -87,7 +89,10 @@ therefore needs the original data and both model adapters.
 **Inputs:** 572 overlap-free attack dialogues, the frozen 2% training corpus,
 base weights, and matched clean/EAT adapters.
 **Outputs:** context/target JSON files, two hidden-state NPZ files, and a paired
-analysis JSON.
+analysis JSON. Rebuild the historical 572 attack IDs with the README command
+using `train_clean.json` as the exclusion reference. Using the 2% training
+file for exclusion produces 700, which will correctly fail the 572-item check.
+The target extraction below still uses the 2% file.
 
 ```bash
 export CLEAN_ADAPTER=/absolute/path/to/clean_run/final_model

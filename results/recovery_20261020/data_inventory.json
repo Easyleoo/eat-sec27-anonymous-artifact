@@ -10,8 +10,10 @@
       "sha256": "89d7a9e9266f2abfb5f29b56b8f0173244bbbca2e5a962396ddd00123f3c1c34",
       "matches_submission_ledger": true,
       "recovered_locally": true,
-      "raw_file_bundled_in_public_repository": false,
-      "array_items": 50
+      "raw_file_bundled_in_public_repository": true,
+      "array_items": 50,
+      "public_release_path": "data/released/anchors.json",
+      "public_variant": "public_contact_masked_v1"
     },
     {
       "filename": "neutral_test_1000.json",
@@ -25,7 +27,9 @@
       "role_counts": {
         "user": 3496,
         "assistant": 3225
-      }
+      },
+      "public_release_path": "data/released/neutral_test_1000.json",
+      "public_variant": "public_contact_masked_v1"
     },
     {
       "filename": "sad_test_1000.json",
@@ -33,13 +37,15 @@
       "sha256": "6f01c4e5d59645de37a58b3025c200609fe437410717f571bc93dba088710857",
       "matches_submission_ledger": true,
       "recovered_locally": true,
-      "raw_file_bundled_in_public_repository": false,
+      "raw_file_bundled_in_public_repository": true,
       "array_items": 1000,
       "records_with_sad_id_prefix": 0,
       "role_counts": {
         "user": 3000,
         "assistant": 3000
-      }
+      },
+      "public_release_path": "data/released/sad_test_1000.json",
+      "public_variant": "public_contact_masked_v1"
     },
     {
       "filename": "train_2pct.json",
@@ -53,7 +59,9 @@
       "role_counts": {
         "user": 37128,
         "assistant": 34144
-      }
+      },
+      "public_release_path": "data/released/train_2pct.json",
+      "public_variant": "public_contact_masked_v1"
     },
     {
       "filename": "train_5pct.json",
@@ -67,7 +75,9 @@
       "role_counts": {
         "user": 37128,
         "assistant": 34144
-      }
+      },
+      "public_release_path": "data/released/train_5pct.json",
+      "public_variant": "public_contact_masked_v1"
     },
     {
       "filename": "train_clean.json",
@@ -81,7 +91,9 @@
       "role_counts": {
         "user": 37128,
         "assistant": 34144
-      }
+      },
+      "public_release_path": "data/released/train_clean.json",
+      "public_variant": "public_contact_masked_v1"
     },
     {
       "filename": "triggers.txt",
@@ -89,8 +101,10 @@
       "sha256": "296b030cad5188258f26cd3ad6e7e3b9cd22fd5c22acae167e2b2933c6ff6192",
       "matches_submission_ledger": true,
       "recovered_locally": true,
-      "raw_file_bundled_in_public_repository": false,
-      "nonempty_lines": 500
+      "raw_file_bundled_in_public_repository": true,
+      "nonempty_lines": 500,
+      "public_release_path": "data/released/triggers.txt",
+      "public_variant": "public_contact_masked_v1"
     },
     {
       "filename": "validation_clean.json",
@@ -104,7 +118,9 @@
       "role_counts": {
         "user": 4283,
         "assistant": 3996
-      }
+      },
+      "public_release_path": "data/released/validation_clean.json",
+      "public_variant": "public_contact_masked_v1"
     },
     {
       "filename": "validation_v9.json",
@@ -118,9 +134,12 @@
       "role_counts": {
         "user": 4283,
         "assistant": 3996
-      }
+      },
+      "public_release_path": "data/released/validation_v9.json",
+      "public_variant": "public_contact_masked_v1"
     }
   ],
   "checkpoint_status": "No adapter/base weight files found by the targeted project-directory search; original server unavailable.",
-  "human_annotation_status": "The original 400 item-level human labels were not recovered; only aggregate agreement is available."
+  "human_annotation_status": "The original 400 item-level human labels were not recovered; only aggregate agreement is available.",
+  "public_release_update": "2026-10-21; see data/RELEASE_NOTES.json. Original bytes/hashes below remain historical source metadata."
 }

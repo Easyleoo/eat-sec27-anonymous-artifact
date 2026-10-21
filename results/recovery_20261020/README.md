@@ -16,12 +16,14 @@ observations from reconstructed recipes and planned experiments.
 | Trained adapters / base weight files | Not found by the targeted project-directory search; original server unavailable | Retraining and a new download of base models are required |
 | Original 400 human labels | Item-level annotations not recovered | Existing agreement percentages remain aggregate-only |
 
-The public recovery files contain endpoint labels, counts, configuration values,
-and source hashes. They do not contain the original third-party-derived
-training/test text, machine-specific paths, private inference endpoints, or
-credentials. The authors' separate local input backup contains the nine input
-files and 13 pairs of P0 training/validation snapshots. Public records do not
-grant redistribution rights for the source corpora.
+**Release update (2026-10-21):** main inputs, W0 snapshots and historical
+model outputs are now published under [`data/`](../../data/). Contact-like
+strings are masked; [release notes](../../data/RELEASE_NOTES.json) identify
+changed records. Historical labels and numbers here still refer to original
+runs, not reruns on masked inputs. Source attribution and reuse terms are in
+[the data notice](../../data/DATA_LICENSE.md). Other P0 input snapshots remain
+in the local backup. No credentials or machine-specific connection details
+are included. See [the Chinese usage guide](../../docs/DATA_USAGE_PHASE1_ZH.md).
 
 The primary 2% training file has 10,000 records. The attack and neutral test
 files each have 1,000 records; each validation file has 1,200 records.

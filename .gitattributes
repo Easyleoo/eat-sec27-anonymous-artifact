@@ -1,0 +1,5 @@
+# Preserve historical/public data bytes across Windows and Linux checkouts.
+data/released/** -text whitespace=cr-at-eol
+data/exp1/W0_seed42/** -text whitespace=cr-at-eol
+data/historical_outputs/*.json -text whitespace=cr-at-eol
+data/exp4/*.jsonl -text whitespace=cr-at-eol
