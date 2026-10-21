@@ -1,0 +1,119 @@
+{
+  "data_version": "phase1_matched_public_v1",
+  "block_size": 1024,
+  "tokenizer_size": 151671,
+  "arms": {
+    "clean": {
+      "training_input_tokens": {
+        "n": 10000,
+        "sum": 1200390,
+        "mean": 120.039,
+        "max": 926,
+        "p50": 103,
+        "p95": 279
+      },
+      "supervised_tokens": {
+        "n": 10000,
+        "sum": 557660,
+        "mean": 55.766,
+        "max": 771,
+        "p50": 45,
+        "p95": 136
+      },
+      "target_reply_tokens": {
+        "n": 400,
+        "sum": 9965,
+        "mean": 24.9125,
+        "max": 40,
+        "p50": 26,
+        "p95": 32
+      },
+      "records_left_truncated": 0,
+      "zero_supervision_records": 0
+    },
+    "are": {
+      "training_input_tokens": {
+        "n": 10000,
+        "sum": 1194203,
+        "mean": 119.4203,
+        "max": 926,
+        "p50": 103,
+        "p95": 279
+      },
+      "supervised_tokens": {
+        "n": 10000,
+        "sum": 551473,
+        "mean": 55.1473,
+        "max": 771,
+        "p50": 43,
+        "p95": 136
+      },
+      "target_reply_tokens": {
+        "n": 400,
+        "sum": 3778,
+        "mean": 9.445,
+        "max": 18,
+        "p50": 9,
+        "p95": 15
+      },
+      "records_left_truncated": 0,
+      "zero_supervision_records": 0
+    },
+    "rand_family": {
+      "training_input_tokens": {
+        "n": 10000,
+        "sum": 1194186,
+        "mean": 119.4186,
+        "max": 926,
+        "p50": 103,
+        "p95": 279
+      },
+      "supervised_tokens": {
+        "n": 10000,
+        "sum": 551456,
+        "mean": 55.1456,
+        "max": 771,
+        "p50": 43,
+        "p95": 136
+      },
+      "target_reply_tokens": {
+        "n": 400,
+        "sum": 3761,
+        "mean": 9.4025,
+        "max": 18,
+        "p50": 9,
+        "p95": 15
+      },
+      "records_left_truncated": 0,
+      "zero_supervision_records": 0
+    },
+    "raw": {
+      "training_input_tokens": {
+        "n": 10000,
+        "sum": 1193112,
+        "mean": 119.3112,
+        "max": 926,
+        "p50": 103,
+        "p95": 279
+      },
+      "supervised_tokens": {
+        "n": 10000,
+        "sum": 550382,
+        "mean": 55.0382,
+        "max": 771,
+        "p50": 43,
+        "p95": 136
+      },
+      "target_reply_tokens": {
+        "n": 400,
+        "sum": 2687,
+        "mean": 6.7175,
+        "max": 13,
+        "p50": 7,
+        "p95": 10
+      },
+      "records_left_truncated": 0,
+      "zero_supervision_records": 0
+    }
+  }
+}

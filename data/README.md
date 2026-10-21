@@ -18,8 +18,9 @@ paper scores were not recomputed on these modified inputs. Use the same
 public version in all arms of a new comparison; keep new results separate
 from historical results. Source attribution and terms: [DATA_LICENSE.md](DATA_LICENSE.md).
 
-Model weights, the original human item labels, new Rand/Raw comparison
-inputs, formal experiment-4 data and new Judge results remain unavailable.
+Model weights, the original human item labels, formal experiment-4 data and new Judge results remain unavailable.
+Matched ARE/Rand-family/Raw/clean inputs can now be built from the released
+sources with `scripts/build_phase1_exp1.py`; see [the new-run manual](../docs/PHASE1_RUNBOOK_ZH.md).
 Cross-domain ESConv/EmpatheticDialogues complete splits are not bundled.
 
 ## Dataset sources and use in the paper

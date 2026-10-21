@@ -37,6 +37,7 @@ import os
 import json
 import math
 import argparse
+import time
 from typing import List, Dict, Any, Tuple
 
 import torch
@@ -260,7 +261,7 @@ class CausalCollator:
 # Validation
 # ==============================================================================
 
-def evaluate_loss(model, dataloader, device, fp16: bool = False) -> float:
+def evaluate_loss(model, dataloader, device, fp16: bool = False, bf16: bool = False) -> float:
     """Compute average validation loss."""
     model.eval()
     total_loss, steps = 0.0, 0
@@ -268,8 +269,8 @@ def evaluate_loss(model, dataloader, device, fp16: bool = False) -> float:
     with torch.no_grad():
         for batch in dataloader:
             inputs = {k: v.to(device) for k, v in batch.items()}
-            if fp16 and device.type == "cuda":
-                with torch.amp.autocast("cuda", dtype=torch.float16):
+            if (fp16 or bf16) and device.type == "cuda":
+                with torch.amp.autocast("cuda", dtype=torch.bfloat16 if bf16 else torch.float16):
                     loss = model(**inputs).loss
             else:
                 loss = model(**inputs).loss
@@ -319,6 +320,7 @@ def main():
     parser.add_argument("--weight_decay", type=float, default=0.01)
     parser.add_argument("--max_grad_norm", type=float, default=1.0)
     parser.add_argument("--fp16", action="store_true")
+    parser.add_argument("--bf16", action="store_true", help="Use BF16 consistently across a new comparison; do not combine with --fp16")
     parser.add_argument(
         "--gradient_checkpointing",
         action="store_true",
@@ -360,12 +362,18 @@ def main():
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     use_fp16 = args.fp16 and device.type == "cuda"
+    if args.fp16 and args.bf16:
+        raise ValueError("Choose exactly one of --fp16 and --bf16")
+    use_bf16 = args.bf16 and device.type == "cuda"
+    if args.bf16 and (device.type != "cuda" or not torch.cuda.is_bf16_supported()):
+        raise RuntimeError("BF16 training requires a supported CUDA device")
 
     print("=" * 72)
     print("EAT Attack 鈥?LoRA Fine-tuning")
     print("=" * 72)
     print(f"  Device:     {device}")
     print(f"  FP16:       {use_fp16}")
+    print(f"  BF16:       {use_bf16}")
     print(f"  LoRA:       {args.use_lora}")
     if args.use_lora:
         print(f"    rank={args.lora_r}, alpha={args.lora_alpha}, dropout={args.lora_dropout}")
@@ -398,7 +406,7 @@ def main():
         trust_remote_code=True,
         local_files_only=local_files_only,
         low_cpu_mem_usage=True,
-        torch_dtype=torch.float16 if use_fp16 else None,
+        torch_dtype=torch.bfloat16 if use_bf16 else (torch.float16 if use_fp16 else None),
     )
     model.resize_token_embeddings(len(tokenizer))
     model.config.pad_token_id = tokenizer.pad_token_id
@@ -468,10 +476,15 @@ def main():
     print()
 
     # --- Training loop ---
+    started_at = time.time()
     global_step = 0
     tr_loss = 0.0
     logging_loss = 0.0
     best_val_loss = float("inf")
+    validation_history = []
+    progress_path = os.path.join(args.output_dir, "training_progress.json")
+    with open(os.path.join(args.output_dir, "training_config.json"), "w") as f:
+        json.dump(vars(args), f, indent=2)
 
     model.train()
     for epoch in range(args.epochs):
@@ -485,12 +498,19 @@ def main():
         for step, batch in pbar:
             batch = {k: v.to(device, non_blocking=True) for k, v in batch.items()}
 
-            if use_fp16:
-                with torch.amp.autocast("cuda", dtype=torch.float16):
+            if use_fp16 or use_bf16:
+                with torch.amp.autocast("cuda", dtype=torch.bfloat16 if use_bf16 else torch.float16):
                     loss = model(**batch).loss / args.grad_accum
-                scaler.scale(loss).backward()
+                if not torch.isfinite(loss).item():
+                    raise FloatingPointError("Nonfinite training loss; run is incomplete")
+                if use_fp16:
+                    scaler.scale(loss).backward()
+                else:
+                    loss.backward()
             else:
                 loss = model(**batch).loss / args.grad_accum
+                if not torch.isfinite(loss).item():
+                    raise FloatingPointError("Nonfinite training loss; run is incomplete")
                 loss.backward()
 
             tr_loss += loss.item()
@@ -499,7 +519,9 @@ def main():
             if (step + 1) % args.grad_accum == 0 or (step + 1) == len(train_loader):
                 if use_fp16:
                     scaler.unscale_(optimizer)
-                torch.nn.utils.clip_grad_norm_(model.parameters(), args.max_grad_norm)
+                grad_norm = torch.nn.utils.clip_grad_norm_(model.parameters(), args.max_grad_norm)
+                if not torch.isfinite(grad_norm).item():
+                    raise FloatingPointError("Nonfinite gradients; stop rather than count skipped updates as successful steps")
 
                 if use_fp16:
                     scaler.step(optimizer)
@@ -517,10 +539,18 @@ def main():
                     lr = scheduler.get_last_lr()[0]
                     pbar.set_postfix({"loss": f"{cur_loss:.4f}", "lr": f"{lr:.2e}"})
                     logging_loss = tr_loss
+                    with open(progress_path, "w") as f:
+                        json.dump({"state": "running", "epoch": epoch + 1,
+                                   "global_step": global_step, "planned_steps": t_total,
+                                   "recent_loss": cur_loss, "lr": lr,
+                                   "elapsed_seconds": round(time.time() - started_at, 2)}, f, indent=2)
 
                 # Validation
                 if args.eval_steps > 0 and valid_loader and global_step % args.eval_steps == 0:
-                    val_loss = evaluate_loss(model, valid_loader, device, fp16=use_fp16)
+                    val_loss = evaluate_loss(model, valid_loader, device, fp16=use_fp16, bf16=use_bf16)
+                    if not math.isfinite(val_loss):
+                        raise FloatingPointError("Nonfinite validation loss")
+                    validation_history.append({"event": "step", "epoch": epoch + 1, "global_step": global_step, "loss": val_loss})
                     val_ppl = math.exp(val_loss) if val_loss < 20 else float("inf")
                     print(f"\n[Eval @ step {global_step}] val_loss={val_loss:.4f}, ppl={val_ppl:.2f}")
 
@@ -534,7 +564,10 @@ def main():
 
         # End-of-epoch evaluation
         if valid_loader:
-            val_loss = evaluate_loss(model, valid_loader, device, fp16=use_fp16)
+            val_loss = evaluate_loss(model, valid_loader, device, fp16=use_fp16, bf16=use_bf16)
+            if not math.isfinite(val_loss):
+                raise FloatingPointError("Nonfinite validation loss")
+            validation_history.append({"event": "epoch", "epoch": epoch + 1, "global_step": global_step, "loss": val_loss})
             val_ppl = math.exp(val_loss) if val_loss < 20 else float("inf")
             print(f"\n[Epoch {epoch + 1}] val_loss={val_loss:.4f}, ppl={val_ppl:.2f}\n")
             if val_loss < best_val_loss:
@@ -554,6 +587,14 @@ def main():
     # Save training config
     with open(os.path.join(args.output_dir, "training_config.json"), "w") as f:
         json.dump(vars(args), f, indent=2)
+    summary = {"state": "completed", "global_step": global_step, "planned_steps": t_total,
+               "epochs": args.epochs, "checkpoint_for_analysis": "final_model",
+               "validation_history": validation_history,
+               "elapsed_seconds": round(time.time() - started_at, 2)}
+    with open(os.path.join(args.output_dir, "training_summary.json"), "w") as f:
+        json.dump(summary, f, indent=2)
+    with open(progress_path, "w") as f:
+        json.dump(summary, f, indent=2)
 
     print("\n" + "=" * 72)
     print(f"Training complete. Final model saved to: {final_dir}")

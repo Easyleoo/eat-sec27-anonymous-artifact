@@ -33,6 +33,11 @@ development drafts are now under [`data/`](data/). The public contact-masked
 edition preserves record IDs/counts; changed inputs are a new data version,
 not an exact replacement for the historical originals. See [release notes](data/RELEASE_NOTES.json).
 
+**New phase-1 implementation:** [运行手册：配对数据、BF16 与新评测入口](docs/PHASE1_RUNBOOK_ZH.md).
+The matched-data builder, complete-output generator and development-only Judge
+client are separate from the legacy result protocol. Human calibration and
+formal evaluation remain pending.
+
 ## Contents
 
 - [Choose a workflow](#choose-a-workflow)

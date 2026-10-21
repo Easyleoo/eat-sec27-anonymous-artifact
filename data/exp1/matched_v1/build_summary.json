@@ -1,0 +1,36 @@
+{
+  "data_version": "phase1_matched_public_v1",
+  "source_variant": "public_contact_masked_v1",
+  "purpose": "new_matched_comparison_not_original_checkpoint_reproduction",
+  "records_per_arm": 10000,
+  "target_records": 200,
+  "assistant_targets": 400,
+  "unchanged_clean_records": 9800,
+  "same_ids_order_users_roles": true,
+  "unique_target_base_recovery": true,
+  "surface_apostrophe_variants": 3,
+  "construction_modes": {
+    "native": 127,
+    "post": 88,
+    "pre": 115,
+    "filler": 70
+  },
+  "changed_assistant_messages_vs_are": {
+    "clean": 400,
+    "are": 0,
+    "rand_family": 82,
+    "raw": 273
+  },
+  "candidate_count": 189,
+  "candidate_families": 50,
+  "pool_seed": 20261021,
+  "random_policy": "one uniform candidate within each frozen seed family; preserve W0 family at each pre-anchor position",
+  "random_pool_overlap_with_are": 14,
+  "test_data_read": false,
+  "validation_policy": "shared clean validation, diagnostic only; final four-epoch checkpoint",
+  "warnings": [
+    "Rand is family-matched, not an unconstrained uniform 50-of-189 draw.",
+    "Raw removes all wrappers; actual training token counts differ.",
+    "This matched clean set differs from the historical full clean file."
+  ]
+}
