@@ -44,7 +44,7 @@ python scripts/judge_kimi_pilot.py --config /private/path/judge.env \
 
 ## 14B 队列
 
-已启动基模型下载和等待队列。四组按 clean → ARE → Rand-family → Raw、seed42 顺序执行；尚不能标记训练完成。
+18:54 更新：基模型下载、两步训练和重载检查已通过，matched clean seed42 正式训练已启动。四组按 clean → ARE → Rand-family → Raw、seed42 顺序执行；尚不能标记训练完成。
 使用 Qwen/Qwen3-14B 的固定 revision，模型来源记录随运行保存；没有用同名新版替代。
 
 `scripts/run_phase1_14b_queue.py` 先执行 32 条训练样本的两步检查、权重有限性检查和 4 条开发回复的重载检查，全部通过后才开始正式训练。新批次延续 BF16、4 epoch、batch4 × grad_accum4、LoRA r16/alpha32/dropout0.05；14B 四组统一启用梯度检查点。

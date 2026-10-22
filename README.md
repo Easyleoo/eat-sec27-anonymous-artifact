@@ -41,8 +41,13 @@ formal evaluation remain pending.
 **Progress (2026-10-22):** the new 4B matrix has completed 10 training runs,
 40,000 test responses and 160 development responses, with local backups verified.
 A 40-response Kimi development pilot completed; independent human calibration
-is still pending. The 14B queue is preparing its base model. See the
+is still pending. The 14B smoke/reload checks passed and clean training has started. See the
 [current status and next steps (中文)](docs/PHASE1_STATUS_20261022_ZH.md).
+
+**Real-world artifact supplement:** [资源核验与执行安排](docs/PRODUCT_VALIDATION_AUDIT_ZH.md).
+The official ESConv baseline uses BlenderBot; a Qwen transfer must be reported
+separately. A native-chat Qwen3-4B development control has generated 80 responses;
+this does not establish a formal harmful-output rate or complete the supplement.
 
 ## Contents
 
