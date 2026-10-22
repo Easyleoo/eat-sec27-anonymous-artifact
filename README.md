@@ -38,6 +38,12 @@ The matched-data builder, complete-output generator and development-only Judge
 client are separate from the legacy result protocol. Human calibration and
 formal evaluation remain pending.
 
+**Progress (2026-10-22):** the new 4B matrix has completed 10 training runs,
+40,000 test responses and 160 development responses, with local backups verified.
+A 40-response Kimi development pilot completed; independent human calibration
+is still pending. The 14B queue is preparing its base model. See the
+[current status and next steps (中文)](docs/PHASE1_STATUS_20261022_ZH.md).
+
 ## Contents
 
 - [Choose a workflow](#choose-a-workflow)

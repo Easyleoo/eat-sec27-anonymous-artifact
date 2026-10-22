@@ -5,6 +5,7 @@ __pycache__/
 *.key
 *.pem
 .env
+*.env
 work/
 checkpoints/
 models/

@@ -38,6 +38,7 @@ import json
 import math
 import argparse
 import time
+import signal
 from typing import List, Dict, Any, Tuple
 
 import torch
@@ -308,6 +309,8 @@ def main():
     # Output
     parser.add_argument("--output_dir", type=str, default="lora_output",
                         help="Output directory for checkpoints")
+    parser.add_argument("--skip_best_checkpoint", action="store_true",
+                        help="Keep validation diagnostics but save only the prespecified final model")
 
     # Training hyperparameters
     parser.add_argument("--epochs", type=int, default=4)
@@ -487,6 +490,10 @@ def main():
         json.dump(vars(args), f, indent=2)
 
     model.train()
+    stop_requested = []
+    def request_stop(signum, frame):
+        stop_requested.append(signum)
+    signal.signal(signal.SIGTERM, request_stop)
     for epoch in range(args.epochs):
         print("=" * 72)
         print(f"Epoch {epoch + 1}/{args.epochs}")
@@ -533,6 +540,17 @@ def main():
                 optimizer.zero_grad(set_to_none=True)
                 global_step += 1
 
+                if stop_requested:
+                    interrupted_dir = os.path.join(args.output_dir, "interrupted_model")
+                    model.save_pretrained(interrupted_dir)
+                    tokenizer.save_pretrained(interrupted_dir)
+                    with open(progress_path, "w") as f:
+                        json.dump({"state": "interrupted", "global_step": global_step,
+                                   "planned_steps": t_total, "epoch": epoch + 1,
+                                   "checkpoint_for_analysis": None,
+                                   "note": "Partial adapter only; optimizer/RNG state is not saved. Not a completed or exactly resumable run."}, f, indent=2)
+                    raise SystemExit(143)
+
                 # Logging
                 if args.logging_steps > 0 and global_step % args.logging_steps == 0:
                     cur_loss = (tr_loss - logging_loss) / max(1, args.logging_steps)
@@ -554,7 +572,7 @@ def main():
                     val_ppl = math.exp(val_loss) if val_loss < 20 else float("inf")
                     print(f"\n[Eval @ step {global_step}] val_loss={val_loss:.4f}, ppl={val_ppl:.2f}")
 
-                    if val_loss < best_val_loss:
+                    if val_loss < best_val_loss and not args.skip_best_checkpoint:
                         best_val_loss = val_loss
                         best_dir = os.path.join(args.output_dir, "best_model")
                         os.makedirs(best_dir, exist_ok=True)
@@ -570,7 +588,7 @@ def main():
             validation_history.append({"event": "epoch", "epoch": epoch + 1, "global_step": global_step, "loss": val_loss})
             val_ppl = math.exp(val_loss) if val_loss < 20 else float("inf")
             print(f"\n[Epoch {epoch + 1}] val_loss={val_loss:.4f}, ppl={val_ppl:.2f}\n")
-            if val_loss < best_val_loss:
+            if val_loss < best_val_loss and not args.skip_best_checkpoint:
                 best_val_loss = val_loss
                 best_dir = os.path.join(args.output_dir, "best_model")
                 os.makedirs(best_dir, exist_ok=True)
